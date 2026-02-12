@@ -1,0 +1,1 @@
+export { HexagonBackground } from "./hexagon";
