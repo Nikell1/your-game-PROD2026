@@ -1678,5 +1678,2525 @@
     "label": "Какой клуб выиграл Лигу Европы 2023?",
     "correctAnswer": "Севилья",
     "difficulty": "hard"
+  },
+  {
+    "id": "nature-easy-1",
+    "themeId": "nature",
+    "label": "Какое самое высокое дерево в мире?",
+    "correctAnswer": "Секвойя",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-2",
+    "themeId": "nature",
+    "label": "Какой цветок считается символом Нидерландов?",
+    "correctAnswer": "Тюльпан",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-3",
+    "themeId": "nature",
+    "label": "Какое животное является символом Австралии?",
+    "correctAnswer": "Кенгуру",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-4",
+    "themeId": "nature",
+    "label": "Сколько сезонов года существует в умеренном климате?",
+    "correctAnswer": "4",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-5",
+    "themeId": "nature",
+    "label": "Какой газ необходим растениям для фотосинтеза?",
+    "correctAnswer": "Углекислый газ",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-6",
+    "themeId": "nature",
+    "label": "Какое море является самым солёным в мире?",
+    "correctAnswer": "Мёртвое море",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-7",
+    "themeId": "nature",
+    "label": "Как называется природное явление, при котором река выходит из берегов?",
+    "correctAnswer": "Наводнение",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-8",
+    "themeId": "nature",
+    "label": "Какая птица не умеет летать, но отлично плавает?",
+    "correctAnswer": "Пингвин",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-9",
+    "themeId": "nature",
+    "label": "Какой океан самый большой?",
+    "correctAnswer": "Тихий океан",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-easy-10",
+    "themeId": "nature",
+    "label": "Какое животное самое быстрое на суше?",
+    "correctAnswer": "Гепард",
+    "difficulty": "easy"
+  },
+  {
+    "id": "nature-medium-1",
+    "themeId": "nature",
+    "label": "Что такое 'Красная книга'?",
+    "correctAnswer": "Список редких и исчезающих видов",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-2",
+    "themeId": "nature",
+    "label": "Какой процесс превращает гусеницу в бабочку?",
+    "correctAnswer": "Метаморфоз",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-3",
+    "themeId": "nature",
+    "label": "Какое растение живёт дольше всех?",
+    "correctAnswer": "Секвойя (до 3000 лет)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-4",
+    "themeId": "nature",
+    "label": "Что изучает орнитология?",
+    "correctAnswer": "Птиц",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-5",
+    "themeId": "nature",
+    "label": "Какой океан самый глубокий?",
+    "correctAnswer": "Тихий океан (Марианская впадина)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-6",
+    "themeId": "nature",
+    "label": "Какое животное способно менять цвет кожи?",
+    "correctAnswer": "Хамелеон",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-7",
+    "themeId": "nature",
+    "label": "Что такое симбиоз в природе?",
+    "correctAnswer": "Взаимовыгодное сожительство организмов",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-8",
+    "themeId": "nature",
+    "label": "Как называется наука о грибах?",
+    "correctAnswer": "Микология",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-9",
+    "themeId": "nature",
+    "label": "Какой злак является самым распространённым в мире?",
+    "correctAnswer": "Рис",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-medium-10",
+    "themeId": "nature",
+    "label": "Какое животное имеет самый большой мозг?",
+    "correctAnswer": "Кашалот",
+    "difficulty": "medium"
+  },
+  {
+    "id": "nature-hard-1",
+    "themeId": "nature",
+    "label": "Что такое 'гало' в атмосферном явлении?",
+    "correctAnswer": "Световое кольцо вокруг Солнца или Луны",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-2",
+    "themeId": "nature",
+    "label": "Какой процент кислорода вырабатывают водоросли Мирового океана?",
+    "correctAnswer": "Около 50-70%",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-3",
+    "themeId": "nature",
+    "label": "Что такое 'эфемероиды'?",
+    "correctAnswer": "Многолетние растения с коротким периодом вегетации",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-4",
+    "themeId": "nature",
+    "label": "Какое животное является самым ядовитым в мире?",
+    "correctAnswer": "Кубинская лягушка (ужасный листолаз)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-5",
+    "themeId": "nature",
+    "label": "Что такое 'пампасы'?",
+    "correctAnswer": "Южноамериканские степи",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-6",
+    "themeId": "nature",
+    "label": "Какая рыба может жить без воды до 4 лет?",
+    "correctAnswer": "Протоптер (двоякодышащая рыба)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-7",
+    "themeId": "nature",
+    "label": "Что такое 'криль'?",
+    "correctAnswer": "Мелкие ракообразные, корм китов",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-8",
+    "themeId": "nature",
+    "label": "Какой лес называют 'лёгкими планеты'?",
+    "correctAnswer": "Амазонская сельва",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-9",
+    "themeId": "nature",
+    "label": "Что такое 'муссоны'?",
+    "correctAnswer": "Сезонные ветры, меняющие направление",
+    "difficulty": "hard"
+  },
+  {
+    "id": "nature-hard-10",
+    "themeId": "nature",
+    "label": "Какое растение цветёт раз в 100 лет?",
+    "correctAnswer": "Пуйя Раймонда (в Андах)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-easy-1",
+    "themeId": "technology",
+    "label": "Кто изобрёл телефон?",
+    "correctAnswer": "Александр Белл",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-2",
+    "themeId": "technology",
+    "label": "Что означает аббревиатура 'USB'?",
+    "correctAnswer": "Universal Serial Bus",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-3",
+    "themeId": "technology",
+    "label": "Какая компания создала iPhone?",
+    "correctAnswer": "Apple",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-4",
+    "themeId": "technology",
+    "label": "Что такое Wi-Fi?",
+    "correctAnswer": "Беспроводная сеть",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-5",
+    "themeId": "technology",
+    "label": "Какой язык программирования назван в честь комедийного шоу?",
+    "correctAnswer": "Python (Monty Python)",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-6",
+    "themeId": "technology",
+    "label": "Что измеряется в гигагерцах?",
+    "correctAnswer": "Тактовая частота процессора",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-7",
+    "themeId": "technology",
+    "label": "Как называется главная плата компьютера?",
+    "correctAnswer": "Материнская плата",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-8",
+    "themeId": "technology",
+    "label": "Что такое RAM?",
+    "correctAnswer": "Оперативная память",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-9",
+    "themeId": "technology",
+    "label": "Кто основал Microsoft?",
+    "correctAnswer": "Билл Гейтс и Пол Аллен",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-easy-10",
+    "themeId": "technology",
+    "label": "Что такое URL?",
+    "correctAnswer": "Адрес веб-страницы",
+    "difficulty": "easy"
+  },
+  {
+    "id": "technology-medium-1",
+    "themeId": "technology",
+    "label": "Что такое 'облачные технологии'?",
+    "correctAnswer": "Удалённые серверы для хранения данных",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-2",
+    "themeId": "technology",
+    "label": "Какой первый компьютер назывался ENIAC?",
+    "correctAnswer": "Электронный числовой интегратор и вычислитель",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-3",
+    "themeId": "technology",
+    "label": "Что такое искусственный интеллект?",
+    "correctAnswer": "Системы, имитирующие человеческое мышление",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-4",
+    "themeId": "technology",
+    "label": "Какой протокол используется для передачи веб-страниц?",
+    "correctAnswer": "HTTP/HTTPS",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-5",
+    "themeId": "technology",
+    "label": "Что такое 'квантовый компьютер'?",
+    "correctAnswer": "Компьютер на основе квантовых явлений",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-6",
+    "themeId": "technology",
+    "label": "Какой язык программирования самый популярный в 2024?",
+    "correctAnswer": "Python",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-7",
+    "themeId": "technology",
+    "label": "Что такое VPN?",
+    "correctAnswer": "Виртуальная частная сеть",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-8",
+    "themeId": "technology",
+    "label": "Какая компания производит процессоры Ryzen?",
+    "correctAnswer": "AMD",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-9",
+    "themeId": "technology",
+    "label": "Что такое 'интернет вещей' (IoT)?",
+    "correctAnswer": "Сеть физических устройств с подключением к интернету",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-medium-10",
+    "themeId": "technology",
+    "label": "Какой год считается годом рождения интернета?",
+    "correctAnswer": "1983 (переход на TCP/IP)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "technology-hard-1",
+    "themeId": "technology",
+    "label": "Что такое 'блокчейн'?",
+    "correctAnswer": "Распределённая база данных с цепочкой блоков",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-2",
+    "themeId": "technology",
+    "label": "Какой алгоритм шифрования считается самым надёжным?",
+    "correctAnswer": "AES-256",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-3",
+    "themeId": "technology",
+    "label": "Что такое 'машинное обучение'?",
+    "correctAnswer": "Метод искусственного интеллекта с обучением на данных",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-4",
+    "themeId": "technology",
+    "label": "Какой язык программирования используется в блокчейне Ethereum?",
+    "correctAnswer": "Solidity",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-5",
+    "themeId": "technology",
+    "label": "Что такое 'нейронная сеть'?",
+    "correctAnswer": "Математическая модель, имитирующая работу мозга",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-6",
+    "themeId": "technology",
+    "label": "Какой протокол лежит в основе электронной почты?",
+    "correctAnswer": "SMTP, POP3, IMAP",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-7",
+    "themeId": "technology",
+    "label": "Что такое 'Big Data'?",
+    "correctAnswer": "Большие данные, технологии их обработки",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-8",
+    "themeId": "technology",
+    "label": "Какой первый алгоритм для поисковых систем создал Google?",
+    "correctAnswer": "PageRank",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-9",
+    "themeId": "technology",
+    "label": "Что такое 'криптовалюта'?",
+    "correctAnswer": "Цифровая валюта на основе криптографии",
+    "difficulty": "hard"
+  },
+  {
+    "id": "technology-hard-10",
+    "themeId": "technology",
+    "label": "Какой язык программирования разработал Джеймс Гослинг?",
+    "correctAnswer": "Java",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-easy-1",
+    "themeId": "mythology",
+    "label": "Кто был верховным богом в древнегреческой мифологии?",
+    "correctAnswer": "Зевс",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-2",
+    "themeId": "mythology",
+    "label": "Как звали бога моря в римской мифологии?",
+    "correctAnswer": "Нептун",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-3",
+    "themeId": "mythology",
+    "label": "Кто такой Геракл?",
+    "correctAnswer": "Герой, сын Зевса, совершивший 12 подвигов",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-4",
+    "themeId": "mythology",
+    "label": "Как назывался трёхголовый пёс, охранявший вход в Аид?",
+    "correctAnswer": "Цербер",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-5",
+    "themeId": "mythology",
+    "label": "Кто в скандинавской мифологии был верховным богом?",
+    "correctAnswer": "Один",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-6",
+    "themeId": "mythology",
+    "label": "Как звали бога грома в славянской мифологии?",
+    "correctAnswer": "Перун",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-7",
+    "themeId": "mythology",
+    "label": "Кто такая Афина?",
+    "correctAnswer": "Богиня мудрости и войны",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-8",
+    "themeId": "mythology",
+    "label": "Как звали крылатого коня в греческой мифологии?",
+    "correctAnswer": "Пегас",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-9",
+    "themeId": "mythology",
+    "label": "Кто такой Тор?",
+    "correctAnswer": "Бог грома в скандинавской мифологии",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-easy-10",
+    "themeId": "mythology",
+    "label": "Что такое 'Ноев ковчег'?",
+    "correctAnswer": "Судно, спасшее людей и животных от потопа",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mythology-medium-1",
+    "themeId": "mythology",
+    "label": "Кто такой Минотавр и где он жил?",
+    "correctAnswer": "Чудовище с головой быка в Лабиринте на Крите",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-2",
+    "themeId": "mythology",
+    "label": "Что такое Вальгалла?",
+    "correctAnswer": "Чертог павших воинов в скандинавской мифологии",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-3",
+    "themeId": "mythology",
+    "label": "Кто такая Медуза Горгона?",
+    "correctAnswer": "Чудовище со змеями вместо волос, взгляд превращал в камень",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-4",
+    "themeId": "mythology",
+    "label": "Кто такой Прометей и за что был наказан?",
+    "correctAnswer": "Титан, подаривший людям огонь, прикованный к скале",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-5",
+    "themeId": "mythology",
+    "label": "Как звали жену Осириса в египетской мифологии?",
+    "correctAnswer": "Исида",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-6",
+    "themeId": "mythology",
+    "label": "Что такое 'Рагнарёк'?",
+    "correctAnswer": "Гибель богов и всего мира в скандинавской мифологии",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-7",
+    "themeId": "mythology",
+    "label": "Кто такой Анубис?",
+    "correctAnswer": "Бог бальзамирования и смерти в Египте",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-8",
+    "themeId": "mythology",
+    "label": "Как звали бога войны в римской мифологии?",
+    "correctAnswer": "Марс",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-9",
+    "themeId": "mythology",
+    "label": "Кто такой Сизиф и чем он знаменит?",
+    "correctAnswer": "Вкатывал камень в гору вечно",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-medium-10",
+    "themeId": "mythology",
+    "label": "Что такое 'Идавелль-поле'?",
+    "correctAnswer": "Поле, где соберутся выжившие боги после Рагнарёка",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mythology-hard-1",
+    "themeId": "mythology",
+    "label": "Кто такой Локи в скандинавской мифологии?",
+    "correctAnswer": "Бог хитрости и обмана, отец чудовищ",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-2",
+    "themeId": "mythology",
+    "label": "Как звали трёх мойр в греческой мифологии?",
+    "correctAnswer": "Клото, Лахесис, Атропос",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-3",
+    "themeId": "mythology",
+    "label": "Что такое 'Иггдрасиль'?",
+    "correctAnswer": "Мировое дерево в скандинавской мифологии",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-4",
+    "themeId": "mythology",
+    "label": "Кто такой Ктулху?",
+    "correctAnswer": "Мифическое чудовище из произведений Лавкрафта",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-5",
+    "themeId": "mythology",
+    "label": "Как звали бога утренней зари в римской мифологии?",
+    "correctAnswer": "Аврора",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-6",
+    "themeId": "mythology",
+    "label": "Что такое 'Некрономикон'?",
+    "correctAnswer": "Вымышленная книга мёртвых в мифах Лавкрафта",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-7",
+    "themeId": "mythology",
+    "label": "Кто такой Сехмет в египетской мифологии?",
+    "correctAnswer": "Богиня войны и палящего солнца",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-8",
+    "themeId": "mythology",
+    "label": "Как звали бога огня в славянской мифологии?",
+    "correctAnswer": "Сварожич",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-9",
+    "themeId": "mythology",
+    "label": "Что такое 'Гиннунгагап'?",
+    "correctAnswer": "Мировая бездна в скандинавской мифологии",
+    "difficulty": "hard"
+  },
+  {
+    "id": "mythology-hard-10",
+    "themeId": "mythology",
+    "label": "Кто такой Тот в египетской мифологии?",
+    "correctAnswer": "Бог мудрости, письменности и луны",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-easy-1",
+    "themeId": "cuisine",
+    "label": "Какое блюдо является традиционным итальянским?",
+    "correctAnswer": "Пицца",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-2",
+    "themeId": "cuisine",
+    "label": "Какой суп считается русским национальным?",
+    "correctAnswer": "Щи",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-3",
+    "themeId": "cuisine",
+    "label": "Из чего делают попкорн?",
+    "correctAnswer": "Из кукурузы",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-4",
+    "themeId": "cuisine",
+    "label": "Какой напиток получают из кофейных зёрен?",
+    "correctAnswer": "Кофе",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-5",
+    "themeId": "cuisine",
+    "label": "Какое блюдо японской кухни самое известное?",
+    "correctAnswer": "Суши",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-6",
+    "themeId": "cuisine",
+    "label": "Какой сыр имеет дырки?",
+    "correctAnswer": "Швейцарский",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-7",
+    "themeId": "cuisine",
+    "label": "Из чего делают вино?",
+    "correctAnswer": "Из винограда",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-8",
+    "themeId": "cuisine",
+    "label": "Какое мясо используется для приготовления шашлыка?",
+    "correctAnswer": "Свинина, баранина, курица",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-9",
+    "themeId": "cuisine",
+    "label": "Какой десерт называется 'Тирамису'?",
+    "correctAnswer": "Итальянский десерт с маскарпоне",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-easy-10",
+    "themeId": "cuisine",
+    "label": "Какую крупу получают из гречихи?",
+    "correctAnswer": "Гречневую",
+    "difficulty": "easy"
+  },
+  {
+    "id": "cuisine-medium-1",
+    "themeId": "cuisine",
+    "label": "Что такое 'карпаччо'?",
+    "correctAnswer": "Блюдо из сырой говядины",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-2",
+    "themeId": "cuisine",
+    "label": "Какая страна является родиной шоколада?",
+    "correctAnswer": "Мексика (цивилизация майя)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-3",
+    "themeId": "cuisine",
+    "label": "Что такое 'фондю'?",
+    "correctAnswer": "Расплавленный сыр с вином, в который макают хлеб",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-4",
+    "themeId": "cuisine",
+    "label": "Какой соус готовят из базилика, оливкового масла и сыра?",
+    "correctAnswer": "Песто",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-5",
+    "themeId": "cuisine",
+    "label": "Что такое 'гаспачо'?",
+    "correctAnswer": "Холодный томатный суп",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-6",
+    "themeId": "cuisine",
+    "label": "Какую рыбу называют 'морским языком'?",
+    "correctAnswer": "Пангасиус или солея",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-7",
+    "themeId": "cuisine",
+    "label": "Что такое 'рататуй'?",
+    "correctAnswer": "Овощное блюдо из Прованса",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-8",
+    "themeId": "cuisine",
+    "label": "Какой чай самый дорогой в мире?",
+    "correctAnswer": "Да Хун Пао",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-9",
+    "themeId": "cuisine",
+    "label": "Что такое 'консоме'?",
+    "correctAnswer": "Осветлённый бульон",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-medium-10",
+    "themeId": "cuisine",
+    "label": "Какая страна производит больше всего сыра?",
+    "correctAnswer": "США",
+    "difficulty": "medium"
+  },
+  {
+    "id": "cuisine-hard-1",
+    "themeId": "cuisine",
+    "label": "Что такое 'соус бешамель'?",
+    "correctAnswer": "Белый соус на молоке и муке",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-2",
+    "themeId": "cuisine",
+    "label": "Какой гриб считается самым дорогим?",
+    "correctAnswer": "Трюфель",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-3",
+    "themeId": "cuisine",
+    "label": "Что такое 'фуа-гра'?",
+    "correctAnswer": "Печень утки или гуся, откормленных особым способом",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-4",
+    "themeId": "cuisine",
+    "label": "Какая специя является самой дорогой в мире?",
+    "correctAnswer": "Шафран",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-5",
+    "themeId": "cuisine",
+    "label": "Что такое 'сувлаки'?",
+    "correctAnswer": "Греческий шашлык",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-6",
+    "themeId": "cuisine",
+    "label": "Какой напиток готовят из перебродившего кобыльего молока?",
+    "correctAnswer": "Кумыс",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-7",
+    "themeId": "cuisine",
+    "label": "Что такое 'мате'?",
+    "correctAnswer": "Чай из падуба парагвайского",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-8",
+    "themeId": "cuisine",
+    "label": "Какое блюдо скрывается под названием 'киш лорен'?",
+    "correctAnswer": "Открытый пирог с ветчиной и сыром",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-9",
+    "themeId": "cuisine",
+    "label": "Что такое 'сомелье'?",
+    "correctAnswer": "Специалист по винам",
+    "difficulty": "hard"
+  },
+  {
+    "id": "cuisine-hard-10",
+    "themeId": "cuisine",
+    "label": "Какой сыр запрещено производить в некоторых странах?",
+    "correctAnswer": "Касу марцу (с личинками насекомых)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-easy-1",
+    "themeId": "animals",
+    "label": "Какое животное называют 'кораблём пустыни'?",
+    "correctAnswer": "Верблюд",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-2",
+    "themeId": "animals",
+    "label": "Какая птица не умеет летать?",
+    "correctAnswer": "Пингвин, страус",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-3",
+    "themeId": "animals",
+    "label": "Сколько ног у паука?",
+    "correctAnswer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-4",
+    "themeId": "animals",
+    "label": "Какое животное самое большое на Земле?",
+    "correctAnswer": "Синий кит",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-5",
+    "themeId": "animals",
+    "label": "Кто из зверей впадает в спячку зимой?",
+    "correctAnswer": "Медведь, ёж, барсук",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-6",
+    "themeId": "animals",
+    "label": "Какая рыба называется так же, как река?",
+    "correctAnswer": "Щука",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-7",
+    "themeId": "animals",
+    "label": "Кто носит детёнышей в сумке?",
+    "correctAnswer": "Кенгуру, коала",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-8",
+    "themeId": "animals",
+    "label": "Какая птица подбрасывает яйца в чужие гнёзда?",
+    "correctAnswer": "Кукушка",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-9",
+    "themeId": "animals",
+    "label": "Какое животное может менять цвет?",
+    "correctAnswer": "Хамелеон",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-easy-10",
+    "themeId": "animals",
+    "label": "Кто такой 'царь зверей'?",
+    "correctAnswer": "Лев",
+    "difficulty": "easy"
+  },
+  {
+    "id": "animals-medium-1",
+    "themeId": "animals",
+    "label": "Какое животное самое быстрое на Земле?",
+    "correctAnswer": "Сапсан (скорость пике)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-2",
+    "themeId": "animals",
+    "label": "Сколько сердец у осьминога?",
+    "correctAnswer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-3",
+    "themeId": "animals",
+    "label": "Какая змея самая длинная?",
+    "correctAnswer": "Сетчатый питон",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-4",
+    "themeId": "animals",
+    "label": "Как называется наука о млекопитающих?",
+    "correctAnswer": "Териология",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-5",
+    "themeId": "animals",
+    "label": "Какое животное имеет самый большой мозг?",
+    "correctAnswer": "Кашалот",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-6",
+    "themeId": "animals",
+    "label": "Сколько видов пингвинов существует?",
+    "correctAnswer": "18",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-7",
+    "themeId": "animals",
+    "label": "Какое животное живёт дольше всех?",
+    "correctAnswer": "Гренландская акула (до 500 лет)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-8",
+    "themeId": "animals",
+    "label": "Как называется детёныш тюленя?",
+    "correctAnswer": "Белек",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-9",
+    "themeId": "animals",
+    "label": "Какое животное не умеет зевать?",
+    "correctAnswer": "Жираф",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-medium-10",
+    "themeId": "animals",
+    "label": "Сколько зубов у улитки?",
+    "correctAnswer": "Около 25000",
+    "difficulty": "medium"
+  },
+  {
+    "id": "animals-hard-1",
+    "themeId": "animals",
+    "label": "Что такое 'зоогеография'?",
+    "correctAnswer": "Наука о распространении животных на Земле",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-2",
+    "themeId": "animals",
+    "label": "Какое животное имеет самый сильный укус?",
+    "correctAnswer": "Гребнистый крокодил",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-3",
+    "themeId": "animals",
+    "label": "Сколько камер в сердце у таракана?",
+    "correctAnswer": "13",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-4",
+    "themeId": "animals",
+    "label": "Как называется самый маленький хищник в мире?",
+    "correctAnswer": "Ласка",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-5",
+    "themeId": "animals",
+    "label": "Какое животное может повернуть голову на 270 градусов?",
+    "correctAnswer": "Сова",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-6",
+    "themeId": "animals",
+    "label": "Сколько видов кенгуру существует?",
+    "correctAnswer": "Около 60",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-7",
+    "themeId": "animals",
+    "label": "Что такое 'эхолокация' у животных?",
+    "correctAnswer": "Ориентация с помощью звуковых сигналов",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-8",
+    "themeId": "animals",
+    "label": "Какое животное самое ядовитое?",
+    "correctAnswer": "Медуза коробочка (морская оса)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-9",
+    "themeId": "animals",
+    "label": "Сколько видов муравьёв существует?",
+    "correctAnswer": "Более 12000",
+    "difficulty": "hard"
+  },
+  {
+    "id": "animals-hard-10",
+    "themeId": "animals",
+    "label": "Какое животное имеет самый длинный язык?",
+    "correctAnswer": "Муравьед",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-easy-1",
+    "themeId": "space",
+    "label": "Какая планета самая большая в Солнечной системе?",
+    "correctAnswer": "Юпитер",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-2",
+    "themeId": "space",
+    "label": "Сколько планет в Солнечной системе?",
+    "correctAnswer": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-3",
+    "themeId": "space",
+    "label": "Как называется спутник Земли?",
+    "correctAnswer": "Луна",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-4",
+    "themeId": "space",
+    "label": "Какая звезда находится в центре Солнечной системы?",
+    "correctAnswer": "Солнце",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-5",
+    "themeId": "space",
+    "label": "Как называется галактика, в которой мы живём?",
+    "correctAnswer": "Млечный Путь",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-6",
+    "themeId": "space",
+    "label": "Кто был первым человеком в космосе?",
+    "correctAnswer": "Юрий Гагарин",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-7",
+    "themeId": "space",
+    "label": "Какая планета известна своими кольцами?",
+    "correctAnswer": "Сатурн",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-8",
+    "themeId": "space",
+    "label": "Что такое астероид?",
+    "correctAnswer": "Малое небесное тело",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-9",
+    "themeId": "space",
+    "label": "Как называется падающая звезда?",
+    "correctAnswer": "Метеор",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-easy-10",
+    "themeId": "space",
+    "label": "Какая планета ближе всего к Солнцу?",
+    "correctAnswer": "Меркурий",
+    "difficulty": "easy"
+  },
+  {
+    "id": "space-medium-1",
+    "themeId": "space",
+    "label": "Что такое 'чёрная дыра'?",
+    "correctAnswer": "Объект с огромной гравитацией, не отпускающий свет",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-2",
+    "themeId": "space",
+    "label": "Какая планета самая горячая?",
+    "correctAnswer": "Венера",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-3",
+    "themeId": "space",
+    "label": "Сколько времени свет идёт от Солнца до Земли?",
+    "correctAnswer": "8 минут 20 секунд",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-4",
+    "themeId": "space",
+    "label": "Что такое 'пояс астероидов'?",
+    "correctAnswer": "Область между Марсом и Юпитером",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-5",
+    "themeId": "space",
+    "label": "Как называются группы звёзд на небе?",
+    "correctAnswer": "Созвездия",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-6",
+    "themeId": "space",
+    "label": "Какая планета вращается лёжа на боку?",
+    "correctAnswer": "Уран",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-7",
+    "themeId": "space",
+    "label": "Что такое 'солнечный ветер'?",
+    "correctAnswer": "Поток заряженных частиц от Солнца",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-8",
+    "themeId": "space",
+    "label": "Какая звезда самая яркая на ночном небе?",
+    "correctAnswer": "Сириус",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-9",
+    "themeId": "space",
+    "label": "Сколько спутников у Марса?",
+    "correctAnswer": "2 (Фобос и Деймос)",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-medium-10",
+    "themeId": "space",
+    "label": "Что такое 'комета'?",
+    "correctAnswer": "Ледяное тело с хвостом из газа и пыли",
+    "difficulty": "medium"
+  },
+  {
+    "id": "space-hard-1",
+    "themeId": "space",
+    "label": "Что такое 'пульсар'?",
+    "correctAnswer": "Нейтронная звезда, излучающая импульсы",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-2",
+    "themeId": "space",
+    "label": "Какая температура на поверхности Венеры?",
+    "correctAnswer": "Около 470°C",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-3",
+    "themeId": "space",
+    "label": "Что такое 'аккреционный диск'?",
+    "correctAnswer": "Диск из вещества, падающего на звезду или чёрную дыру",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-4",
+    "themeId": "space",
+    "label": "Сколько галактик в наблюдаемой Вселенной?",
+    "correctAnswer": "Около 2 триллионов",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-5",
+    "themeId": "space",
+    "label": "Что такое 'квазар'?",
+    "correctAnswer": "Активное ядро галактики с огромной светимостью",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-6",
+    "themeId": "space",
+    "label": "Какая планета имеет самый длинный день?",
+    "correctAnswer": "Венера (243 земных дня)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-7",
+    "themeId": "space",
+    "label": "Что такое 'горизонт событий'?",
+    "correctAnswer": "Граница чёрной дыры",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-8",
+    "themeId": "space",
+    "label": "Какая луна Юпитера имеет вулканы?",
+    "correctAnswer": "Ио",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-9",
+    "themeId": "space",
+    "label": "Что такое 'тёмная материя'?",
+    "correctAnswer": "Гипотетическая материя, не взаимодействующая со светом",
+    "difficulty": "hard"
+  },
+  {
+    "id": "space-hard-10",
+    "themeId": "space",
+    "label": "Сколько спутников у Юпитера?",
+    "correctAnswer": "79 (известных)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-easy-1",
+    "themeId": "medicine",
+    "label": "Какой орган перекачивает кровь в организме?",
+    "correctAnswer": "Сердце",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-2",
+    "themeId": "medicine",
+    "label": "Сколько зубов у взрослого человека?",
+    "correctAnswer": "32",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-3",
+    "themeId": "medicine",
+    "label": "Что измеряет термометр?",
+    "correctAnswer": "Температуру",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-4",
+    "themeId": "medicine",
+    "label": "Какой витамин вырабатывается на солнце?",
+    "correctAnswer": "Витамин D",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-5",
+    "themeId": "medicine",
+    "label": "Сколько костей в теле человека?",
+    "correctAnswer": "206",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-6",
+    "themeId": "medicine",
+    "label": "Какой орган отвечает за зрение?",
+    "correctAnswer": "Глаза",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-7",
+    "themeId": "medicine",
+    "label": "Что такое аспирин?",
+    "correctAnswer": "Обезболивающее и жаропонижающее средство",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-8",
+    "themeId": "medicine",
+    "label": "Как называется детский врач?",
+    "correctAnswer": "Педиатр",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-9",
+    "themeId": "medicine",
+    "label": "Какая группа крови самая редкая?",
+    "correctAnswer": "AB с отрицательным резусом",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-easy-10",
+    "themeId": "medicine",
+    "label": "Что такое аллергия?",
+    "correctAnswer": "Реакция иммунной системы на раздражители",
+    "difficulty": "easy"
+  },
+  {
+    "id": "medicine-medium-1",
+    "themeId": "medicine",
+    "label": "Что изучает кардиология?",
+    "correctAnswer": "Сердечно-сосудистую систему",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-2",
+    "themeId": "medicine",
+    "label": "Как называется прибор для измерения давления?",
+    "correctAnswer": "Тонометр",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-3",
+    "themeId": "medicine",
+    "label": "Сколько литров крови в организме человека?",
+    "correctAnswer": "5-6 литров",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-4",
+    "themeId": "medicine",
+    "label": "Что такое ДНК?",
+    "correctAnswer": "Дезоксирибонуклеиновая кислота",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-5",
+    "themeId": "medicine",
+    "label": "Какой врач лечит зубы?",
+    "correctAnswer": "Стоматолог",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-6",
+    "themeId": "medicine",
+    "label": "Что такое инсульт?",
+    "correctAnswer": "Нарушение мозгового кровообращения",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-7",
+    "themeId": "medicine",
+    "label": "Какой орган вырабатывает инсулин?",
+    "correctAnswer": "Поджелудочная железа",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-8",
+    "themeId": "medicine",
+    "label": "Что такое плацебо?",
+    "correctAnswer": "Пустышка, вещество без лекарственного действия",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-9",
+    "themeId": "medicine",
+    "label": "Какая самая длинная кость в теле?",
+    "correctAnswer": "Бедренная",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-medium-10",
+    "themeId": "medicine",
+    "label": "Что такое антибиотики?",
+    "correctAnswer": "Препараты против бактерий",
+    "difficulty": "medium"
+  },
+  {
+    "id": "medicine-hard-1",
+    "themeId": "medicine",
+    "label": "Кто открыл пенициллин?",
+    "correctAnswer": "Александр Флеминг",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-2",
+    "themeId": "medicine",
+    "label": "Что такое 'гематоэнцефалический барьер'?",
+    "correctAnswer": "Защитный механизм между кровью и мозгом",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-3",
+    "themeId": "medicine",
+    "label": "Сколько хромосом у человека?",
+    "correctAnswer": "46 (23 пары)",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-4",
+    "themeId": "medicine",
+    "label": "Что такое 'апоптоз'?",
+    "correctAnswer": "Запрограммированная гибель клеток",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-5",
+    "themeId": "medicine",
+    "label": "Какой орган удаляют при аппендиците?",
+    "correctAnswer": "Аппендикс",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-6",
+    "themeId": "medicine",
+    "label": "Что такое 'МРТ'?",
+    "correctAnswer": "Магнитно-резонансная томография",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-7",
+    "themeId": "medicine",
+    "label": "Какая группа крови универсальный донор?",
+    "correctAnswer": "O (I) отрицательная",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-8",
+    "themeId": "medicine",
+    "label": "Что такое 'систола' и 'диастола'?",
+    "correctAnswer": "Фазы сокращения и расслабления сердца",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-9",
+    "themeId": "medicine",
+    "label": "Кто такой 'невролог'?",
+    "correctAnswer": "Врач по нервной системе",
+    "difficulty": "hard"
+  },
+  {
+    "id": "medicine-hard-10",
+    "themeId": "medicine",
+    "label": "Что такое 'эпидемия'?",
+    "correctAnswer": "Массовое распространение инфекции",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-easy-1",
+    "themeId": "economics",
+    "label": "Что такое деньги?",
+    "correctAnswer": "Средство обмена и измерения стоимости",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-2",
+    "themeId": "economics",
+    "label": "Как называется место, где продают и покупают товары?",
+    "correctAnswer": "Рынок",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-3",
+    "themeId": "economics",
+    "label": "Что такое банк?",
+    "correctAnswer": "Финансовое учреждение для хранения и операций с деньгами",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-4",
+    "themeId": "economics",
+    "label": "Что означает слово 'кредит'?",
+    "correctAnswer": "Ссуда денег под проценты",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-5",
+    "themeId": "economics",
+    "label": "Как называются деньги другой страны?",
+    "correctAnswer": "Валюта",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-6",
+    "themeId": "economics",
+    "label": "Что такое зарплата?",
+    "correctAnswer": "Плата за труд",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-7",
+    "themeId": "economics",
+    "label": "Какой орган печатает деньги в России?",
+    "correctAnswer": "Гознак",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-8",
+    "themeId": "economics",
+    "label": "Что такое налог?",
+    "correctAnswer": "Обязательный платёж государству",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-9",
+    "themeId": "economics",
+    "label": "Как называется карманные деньги?",
+    "correctAnswer": "Наличные",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-easy-10",
+    "themeId": "economics",
+    "label": "Что такое скидка?",
+    "correctAnswer": "Уменьшение цены",
+    "difficulty": "easy"
+  },
+  {
+    "id": "economics-medium-1",
+    "themeId": "economics",
+    "label": "Что такое инфляция?",
+    "correctAnswer": "Обесценивание денег, рост цен",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-2",
+    "themeId": "economics",
+    "label": "Что означает ВВП?",
+    "correctAnswer": "Валовой внутренний продукт",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-3",
+    "themeId": "economics",
+    "label": "Кто такой брокер?",
+    "correctAnswer": "Посредник на бирже",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-4",
+    "themeId": "economics",
+    "label": "Что такое акция?",
+    "correctAnswer": "Ценная бумага, дающая право на часть компании",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-5",
+    "themeId": "economics",
+    "label": "Что такое депозит?",
+    "correctAnswer": "Вклад в банке под проценты",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-6",
+    "themeId": "economics",
+    "label": "Кто такой предприниматель?",
+    "correctAnswer": "Человек, организующий бизнес",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-7",
+    "themeId": "economics",
+    "label": "Что такое бюджет?",
+    "correctAnswer": "План доходов и расходов",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-8",
+    "themeId": "economics",
+    "label": "Что такое ипотека?",
+    "correctAnswer": "Кредит на покупку жилья под залог",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-9",
+    "themeId": "economics",
+    "label": "Что такое монополия?",
+    "correctAnswer": "Исключительное право на рынке",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-medium-10",
+    "themeId": "economics",
+    "label": "Какая валюта в Европейском союзе?",
+    "correctAnswer": "Евро",
+    "difficulty": "medium"
+  },
+  {
+    "id": "economics-hard-1",
+    "themeId": "economics",
+    "label": "Что такое 'криптовалюта'?",
+    "correctAnswer": "Цифровая валюта на основе блокчейна",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-2",
+    "themeId": "economics",
+    "label": "Кто такой 'инвестор'?",
+    "correctAnswer": "Человек, вкладывающий деньги в проекты",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-3",
+    "themeId": "economics",
+    "label": "Что такое 'дефолт'?",
+    "correctAnswer": "Неспособность платить по долгам",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-4",
+    "themeId": "economics",
+    "label": "Что такое 'ликвидность'?",
+    "correctAnswer": "Способность актива быстро продаться",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-5",
+    "themeId": "economics",
+    "label": "Кто такой 'олигарх'?",
+    "correctAnswer": "Крупный бизнесмен с влиянием на политику",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-6",
+    "themeId": "economics",
+    "label": "Что такое 'стагфляция'?",
+    "correctAnswer": "Сочетание спада и инфляции",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-7",
+    "themeId": "economics",
+    "label": "Что такое 'ВТО'?",
+    "correctAnswer": "Всемирная торговая организация",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-8",
+    "themeId": "economics",
+    "label": "Кто основал экономическую теорию?",
+    "correctAnswer": "Адам Смит",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-9",
+    "themeId": "economics",
+    "label": "Что такое 'офшор'?",
+    "correctAnswer": "Зона с низкими налогами для компаний",
+    "difficulty": "hard"
+  },
+  {
+    "id": "economics-hard-10",
+    "themeId": "economics",
+    "label": "Что такое 'Всемирный банк'?",
+    "correctAnswer": "Международная финансовая организация",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-easy-1",
+    "themeId": "psychology",
+    "label": "Что изучает психология?",
+    "correctAnswer": "Психику и поведение человека",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-2",
+    "themeId": "psychology",
+    "label": "Кто считается отцом психоанализа?",
+    "correctAnswer": "Зигмунд Фрейд",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-3",
+    "themeId": "psychology",
+    "label": "Что такое эмоции?",
+    "correctAnswer": "Реакции на события",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-4",
+    "themeId": "psychology",
+    "label": "Что такое память?",
+    "correctAnswer": "Способность хранить информацию",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-5",
+    "themeId": "psychology",
+    "label": "Что такое стресс?",
+    "correctAnswer": "Напряжение организма",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-6",
+    "themeId": "psychology",
+    "label": "Что такое сон?",
+    "correctAnswer": "Физиологическое состояние покоя",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-7",
+    "themeId": "psychology",
+    "label": "Что такое характер?",
+    "correctAnswer": "Совокупность черт личности",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-8",
+    "themeId": "psychology",
+    "label": "Что такое инстинкт?",
+    "correctAnswer": "Врождённое поведение",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-9",
+    "themeId": "psychology",
+    "label": "Что такое внимание?",
+    "correctAnswer": "Направленность сознания",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-easy-10",
+    "themeId": "psychology",
+    "label": "Что такое личность?",
+    "correctAnswer": "Индивид с социальными качествами",
+    "difficulty": "easy"
+  },
+  {
+    "id": "psychology-medium-1",
+    "themeId": "psychology",
+    "label": "Что такое 'бессознательное' по Фрейду?",
+    "correctAnswer": "Скрытые желания и инстинкты",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-2",
+    "themeId": "psychology",
+    "label": "Что такое 'IQ'?",
+    "correctAnswer": "Коэффициент интеллекта",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-3",
+    "themeId": "psychology",
+    "label": "Кто ввёл понятие 'архетип'?",
+    "correctAnswer": "Карл Юнг",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-4",
+    "themeId": "psychology",
+    "label": "Что такое 'депрессия'?",
+    "correctAnswer": "Психическое расстройство с подавленным настроением",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-5",
+    "themeId": "psychology",
+    "label": "Что такое 'фобия'?",
+    "correctAnswer": "Навязчивый страх",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-6",
+    "themeId": "psychology",
+    "label": "Что изучает социальная психология?",
+    "correctAnswer": "Поведение человека в обществе",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-7",
+    "themeId": "psychology",
+    "label": "Что такое 'экстраверт'?",
+    "correctAnswer": "Общительный, направленный вовне человек",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-8",
+    "themeId": "psychology",
+    "label": "Что такое 'интроверт'?",
+    "correctAnswer": "Замкнутый, направленный внутрь человек",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-9",
+    "themeId": "psychology",
+    "label": "Что такое 'мотивация'?",
+    "correctAnswer": "Побуждение к действию",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-medium-10",
+    "themeId": "psychology",
+    "label": "Что такое 'эмпатия'?",
+    "correctAnswer": "Способность сопереживать",
+    "difficulty": "medium"
+  },
+  {
+    "id": "psychology-hard-1",
+    "themeId": "psychology",
+    "label": "Кто создал иерархию потребностей?",
+    "correctAnswer": "Абрахам Маслоу",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-2",
+    "themeId": "psychology",
+    "label": "Что такое 'когнитивный диссонанс'?",
+    "correctAnswer": "Противоречие в знаниях и поведении",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-3",
+    "themeId": "psychology",
+    "label": "Что изучает нейропсихология?",
+    "correctAnswer": "Связь мозга и психики",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-4",
+    "themeId": "psychology",
+    "label": "Кто такой 'психотерапевт'?",
+    "correctAnswer": "Врач, лечащий психические расстройства",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-5",
+    "themeId": "psychology",
+    "label": "Что такое 'эдипов комплекс'?",
+    "correctAnswer": "Влечение к родителю противоположного пола",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-6",
+    "themeId": "psychology",
+    "label": "Что такое 'гештальтпсихология'?",
+    "correctAnswer": "Направление, изучающее целостные структуры",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-7",
+    "themeId": "psychology",
+    "label": "Кто ввёл понятие 'самоактуализация'?",
+    "correctAnswer": "Абрахам Маслоу",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-8",
+    "themeId": "psychology",
+    "label": "Что такое 'прокрастинация'?",
+    "correctAnswer": "Откладывание дел на потом",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-9",
+    "themeId": "psychology",
+    "label": "Что изучает психосоматика?",
+    "correctAnswer": "Влияние психики на тело",
+    "difficulty": "hard"
+  },
+  {
+    "id": "psychology-hard-10",
+    "themeId": "psychology",
+    "label": "Кто такой 'бихевиорист'?",
+    "correctAnswer": "Психолог, изучающий поведение",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-easy-1",
+    "themeId": "philosophy",
+    "label": "Что изучает философия?",
+    "correctAnswer": "Сущность мира и человека",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-2",
+    "themeId": "philosophy",
+    "label": "Кто был учителем Аристотеля?",
+    "correctAnswer": "Платон",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-3",
+    "themeId": "philosophy",
+    "label": "Что означает слово 'философия'?",
+    "correctAnswer": "Любовь к мудрости",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-4",
+    "themeId": "philosophy",
+    "label": "Кто такой Сократ?",
+    "correctAnswer": "Древнегреческий философ",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-5",
+    "themeId": "philosophy",
+    "label": "Что такое 'бытие'?",
+    "correctAnswer": "Существование",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-6",
+    "themeId": "philosophy",
+    "label": "Кто написал 'Государство'?",
+    "correctAnswer": "Платон",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-7",
+    "themeId": "philosophy",
+    "label": "Что такое 'этика'?",
+    "correctAnswer": "Учение о морали",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-8",
+    "themeId": "philosophy",
+    "label": "Кто такой Ницше?",
+    "correctAnswer": "Немецкий философ",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-9",
+    "themeId": "philosophy",
+    "label": "Что такое 'логос'?",
+    "correctAnswer": "Разум, слово, закон",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-easy-10",
+    "themeId": "philosophy",
+    "label": "Кто автор 'Критики чистого разума'?",
+    "correctAnswer": "Иммануил Кант",
+    "difficulty": "easy"
+  },
+  {
+    "id": "philosophy-medium-1",
+    "themeId": "philosophy",
+    "label": "Что такое 'диалектика'?",
+    "correctAnswer": "Метод познания через противоречия",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-2",
+    "themeId": "philosophy",
+    "label": "Кто основал стоицизм?",
+    "correctAnswer": "Зенон Китийский",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-3",
+    "themeId": "philosophy",
+    "label": "Что такое 'метафизика'?",
+    "correctAnswer": "Учение о первоосновах бытия",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-4",
+    "themeId": "philosophy",
+    "label": "Кто такой Конфуций?",
+    "correctAnswer": "Китайский философ",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-5",
+    "themeId": "philosophy",
+    "label": "Что такое 'экзистенциализм'?",
+    "correctAnswer": "Философия существования",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-6",
+    "themeId": "philosophy",
+    "label": "Кто автор 'Так говорил Заратустра'?",
+    "correctAnswer": "Фридрих Ницше",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-7",
+    "themeId": "philosophy",
+    "label": "Что такое 'эмпиризм'?",
+    "correctAnswer": "Познание через опыт",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-8",
+    "themeId": "philosophy",
+    "label": "Что такое 'рационализм'?",
+    "correctAnswer": "Познание через разум",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-9",
+    "themeId": "philosophy",
+    "label": "Кто такой Декарт?",
+    "correctAnswer": "Французский философ ('Мыслю, значит существую')",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-medium-10",
+    "themeId": "philosophy",
+    "label": "Что такое 'солипсизм'?",
+    "correctAnswer": "Учение, признающее реальность только своего сознания",
+    "difficulty": "medium"
+  },
+  {
+    "id": "philosophy-hard-1",
+    "themeId": "philosophy",
+    "label": "Кто автор 'Критики практического разума'?",
+    "correctAnswer": "Иммануил Кант",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-2",
+    "themeId": "philosophy",
+    "label": "Что такое 'категорический императив'?",
+    "correctAnswer": "Нравственный закон Канта",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-3",
+    "themeId": "philosophy",
+    "label": "Кто такой 'киник'?",
+    "correctAnswer": "Последователь философской школы киников",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-4",
+    "themeId": "philosophy",
+    "label": "Что такое 'трансцендентальное'?",
+    "correctAnswer": "Выходящее за пределы опыта",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-5",
+    "themeId": "philosophy",
+    "label": "Кто такой Эпикур?",
+    "correctAnswer": "Философ, основатель эпикуреизма",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-6",
+    "themeId": "philosophy",
+    "label": "Что такое 'априори'?",
+    "correctAnswer": "Знание до опыта",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-7",
+    "themeId": "philosophy",
+    "label": "Кто основал позитивизм?",
+    "correctAnswer": "Огюст Конт",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-8",
+    "themeId": "philosophy",
+    "label": "Что такое 'феноменология'?",
+    "correctAnswer": "Учение о явлениях сознания",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-9",
+    "themeId": "philosophy",
+    "label": "Кто такой Спиноза?",
+    "correctAnswer": "Философ-рационалист",
+    "difficulty": "hard"
+  },
+  {
+    "id": "philosophy-hard-10",
+    "themeId": "philosophy",
+    "label": "Что такое 'герменевтика'?",
+    "correctAnswer": "Теория истолкования текстов",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-easy-1",
+    "themeId": "fashion",
+    "label": "Как называется показ мод?",
+    "correctAnswer": "Дефиле",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-2",
+    "themeId": "fashion",
+    "label": "Кто такая Коко Шанель?",
+    "correctAnswer": "Известный модельер",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-3",
+    "themeId": "fashion",
+    "label": "Что такое 'маленькое чёрное платье'?",
+    "correctAnswer": "Классическое платье от Шанель",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-4",
+    "themeId": "fashion",
+    "label": "Как называется обувь на высоком каблуке?",
+    "correctAnswer": "Туфли-лодочки",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-5",
+    "themeId": "fashion",
+    "label": "Что такое джинсы?",
+    "correctAnswer": "Брюки из денима",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-6",
+    "themeId": "fashion",
+    "label": "Какой аксессуар носят на шее?",
+    "correctAnswer": "Шарф, галстук, колье",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-7",
+    "themeId": "fashion",
+    "label": "Что такое 'Christian Dior'?",
+    "correctAnswer": "Французский дом моды",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-8",
+    "themeId": "fashion",
+    "label": "Что такое 'тренч'?",
+    "correctAnswer": "Плащ",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-9",
+    "themeId": "fashion",
+    "label": "Как называется женская сумочка?",
+    "correctAnswer": "Клатч",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-easy-10",
+    "themeId": "fashion",
+    "label": "Что такое 'каблук-шпилька'?",
+    "correctAnswer": "Тонкий высокий каблук",
+    "difficulty": "easy"
+  },
+  {
+    "id": "fashion-medium-1",
+    "themeId": "fashion",
+    "label": "Кто создал бренд 'Gucci'?",
+    "correctAnswer": "Гуччио Гуччи",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-2",
+    "themeId": "fashion",
+    "label": "Что такое 'pret-a-porter'?",
+    "correctAnswer": "Готовая одежда",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-3",
+    "themeId": "fashion",
+    "label": "Что такое 'haute couture'?",
+    "correctAnswer": "Высокая мода",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-4",
+    "themeId": "fashion",
+    "label": "Кто такая Анна Винтур?",
+    "correctAnswer": "Главный редактор Vogue",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-5",
+    "themeId": "fashion",
+    "label": "Какой бренд известен сумкой 'Birkin'?",
+    "correctAnswer": "Hermès",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-6",
+    "themeId": "fashion",
+    "label": "Что такое 'капри'?",
+    "correctAnswer": "Укороченные брюки",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-7",
+    "themeId": "fashion",
+    "label": "Кто такой Карл Лагерфельд?",
+    "correctAnswer": "Модельер, дизайнер Chanel",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-8",
+    "themeId": "fashion",
+    "label": "Что такое 'минимализм' в моде?",
+    "correctAnswer": "Стиль с простыми формами",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-9",
+    "themeId": "fashion",
+    "label": "Какой цвет считается классическим для делового костюма?",
+    "correctAnswer": "Чёрный, синий, серый",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-medium-10",
+    "themeId": "fashion",
+    "label": "Кто создал бренд 'Versace'?",
+    "correctAnswer": "Джанни Версаче",
+    "difficulty": "medium"
+  },
+  {
+    "id": "fashion-hard-1",
+    "themeId": "fashion",
+    "label": "Что такое 'Met Gala'?",
+    "correctAnswer": "Ежегодный бал моды в Нью-Йорке",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-2",
+    "themeId": "fashion",
+    "label": "Кто такой Александр Маккуин?",
+    "correctAnswer": "Британский модельер-авангардист",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-3",
+    "themeId": "fashion",
+    "label": "Что такое 'деконструкция' в моде?",
+    "correctAnswer": "Разрушение традиционных форм одежды",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-4",
+    "themeId": "fashion",
+    "label": "Кто основал дом моды 'Balenciaga'?",
+    "correctAnswer": "Кристобаль Баленсиага",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-5",
+    "themeId": "fashion",
+    "label": "Что такое 'викторианский стиль'?",
+    "correctAnswer": "Стиль эпохи королевы Виктории",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-6",
+    "themeId": "fashion",
+    "label": "Кто создал 'новый взгляд' (New Look) в моде?",
+    "correctAnswer": "Кристиан Диор",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-7",
+    "themeId": "fashion",
+    "label": "Что такое 'подиум'?",
+    "correctAnswer": "Сцена для показа мод",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-8",
+    "themeId": "fashion",
+    "label": "Кто такая Вивьен Вествуд?",
+    "correctAnswer": "Дизайнер, создатель стиля панк",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-9",
+    "themeId": "fashion",
+    "label": "Что такое 'кросс-дрессинг'?",
+    "correctAnswer": "Ношение одежды противоположного пола",
+    "difficulty": "hard"
+  },
+  {
+    "id": "fashion-hard-10",
+    "themeId": "fashion",
+    "label": "Кто создал бренд 'Yves Saint Laurent'?",
+    "correctAnswer": "Ив Сен-Лоран",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-easy-1",
+    "themeId": "architecture",
+    "label": "Какое самое известное здание в Париже?",
+    "correctAnswer": "Эйфелева башня",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-2",
+    "themeId": "architecture",
+    "label": "Что такое пирамиды?",
+    "correctAnswer": "Древние гробницы фараонов",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-3",
+    "themeId": "architecture",
+    "label": "Как называется жилой дом в городе?",
+    "correctAnswer": "Здание",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-4",
+    "themeId": "architecture",
+    "label": "Что такое колонна?",
+    "correctAnswer": "Вертикальная опора",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-5",
+    "themeId": "architecture",
+    "label": "Какое здание является символом Рима?",
+    "correctAnswer": "Колизей",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-6",
+    "themeId": "architecture",
+    "label": "Что такое арка?",
+    "correctAnswer": "Криволинейное перекрытие проёма",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-7",
+    "themeId": "architecture",
+    "label": "Какая стена в Китае самая известная?",
+    "correctAnswer": "Великая Китайская стена",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-8",
+    "themeId": "architecture",
+    "label": "Что такое собор?",
+    "correctAnswer": "Главный храм города",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-9",
+    "themeId": "architecture",
+    "label": "Кто строит здания?",
+    "correctAnswer": "Архитектор",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-easy-10",
+    "themeId": "architecture",
+    "label": "Что такое фундамент?",
+    "correctAnswer": "Основание здания",
+    "difficulty": "easy"
+  },
+  {
+    "id": "architecture-medium-1",
+    "themeId": "architecture",
+    "label": "Что такое 'готический стиль'?",
+    "correctAnswer": "Стиль с остроконечными башнями и витражами",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-2",
+    "themeId": "architecture",
+    "label": "Кто построил собор Святого Петра в Риме?",
+    "correctAnswer": "Микеланджело и другие",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-3",
+    "themeId": "architecture",
+    "label": "Что такое 'барокко'?",
+    "correctAnswer": "Пышный архитектурный стиль",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-4",
+    "themeId": "architecture",
+    "label": "Что такое 'небоскрёб'?",
+    "correctAnswer": "Очень высокое здание",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-5",
+    "themeId": "architecture",
+    "label": "Какой архитектор создал Капитолий в Вашингтоне?",
+    "correctAnswer": "Уильям Торнтон",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-6",
+    "themeId": "architecture",
+    "label": "Что такое 'ордер' в архитектуре?",
+    "correctAnswer": "Система пропорций колонн",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-7",
+    "themeId": "architecture",
+    "label": "Кто создал проект Эйфелевой башни?",
+    "correctAnswer": "Гюстав Эйфель",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-8",
+    "themeId": "architecture",
+    "label": "Что такое 'ампир'?",
+    "correctAnswer": "Стиль эпохи Наполеона",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-9",
+    "themeId": "architecture",
+    "label": "Какое здание является самым высоким в мире?",
+    "correctAnswer": "Бурдж-Халифа",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-medium-10",
+    "themeId": "architecture",
+    "label": "Что такое 'классицизм'?",
+    "correctAnswer": "Стиль, основанный на античных формах",
+    "difficulty": "medium"
+  },
+  {
+    "id": "architecture-hard-1",
+    "themeId": "architecture",
+    "label": "Кто такой Антонио Гауди?",
+    "correctAnswer": "Испанский архитектор, автор Саграда Фамилия",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-2",
+    "themeId": "architecture",
+    "label": "Что такое 'модерн'?",
+    "correctAnswer": "Стиль с плавными линиями",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-3",
+    "themeId": "architecture",
+    "label": "Какой архитектор построил Тадж-Махал?",
+    "correctAnswer": "Устад Ахмад Лахаури",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-4",
+    "themeId": "architecture",
+    "label": "Что такое 'конструктивизм'?",
+    "correctAnswer": "Стиль с функциональными формами",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-5",
+    "themeId": "architecture",
+    "label": "Кто создал проект Сиднейского оперного театра?",
+    "correctAnswer": "Йорн Утзон",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-6",
+    "themeId": "architecture",
+    "label": "Что такое 'романский стиль'?",
+    "correctAnswer": "Стиль с толстыми стенами и маленькими окнами",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-7",
+    "themeId": "architecture",
+    "label": "Кто такой Ле Корбюзье?",
+    "correctAnswer": "Архитектор-модернист",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-8",
+    "themeId": "architecture",
+    "label": "Что такое 'ар-деко'?",
+    "correctAnswer": "Стиль с геометрическими формами",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-9",
+    "themeId": "architecture",
+    "label": "Какой собор строится уже более 140 лет?",
+    "correctAnswer": "Саграда Фамилия",
+    "difficulty": "hard"
+  },
+  {
+    "id": "architecture-hard-10",
+    "themeId": "architecture",
+    "label": "Кто создал проект здания Парламента в Лондоне?",
+    "correctAnswer": "Чарльз Бэрри",
+    "difficulty": "hard"
   }
 ]

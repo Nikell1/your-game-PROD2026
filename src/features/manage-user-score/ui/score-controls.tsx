@@ -2,7 +2,7 @@
 
 import { IActivePlayer } from "@/entities/player";
 import { Button } from "@/shared/ui";
-import { useManageScore } from "../hooks/use-manage-score";
+import { useManageScore } from "../lib/use-manage-score";
 import { DEV_MODE_SCORE_BUTTON_POINT } from "../score.constants";
 
 interface ScoreControlsProps {

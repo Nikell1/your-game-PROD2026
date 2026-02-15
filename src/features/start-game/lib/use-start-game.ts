@@ -1,4 +1,4 @@
-import { useGameStore } from "@/entities/game";
+import { ROUND_1_PRICE_STEP, useGameStore } from "@/entities/game";
 import { ISetupPlayer } from "@/entities/player";
 import { GAME_ROUTES } from "@/shared/config";
 import { useRouter } from "next/navigation";
@@ -11,14 +11,19 @@ interface Props {
 }
 
 export function useStartGame() {
-  const { setPlayers, setStatus, setThemes } = useGameStore();
+  const { setPlayers, setStatus, setThemes, setQuestions } = useGameStore();
   const router = useRouter();
 
   return ({ playersData, resetSetupGameStore }: Props) => {
     setGamePlayers({ playersData, setPlayers });
     resetSetupGameStore();
 
-    generateQuestions(setThemes);
+    generateQuestions({
+      setThemes,
+      difficulty: "easy",
+      setQuestions,
+      step: ROUND_1_PRICE_STEP,
+    });
 
     setStatus("ROUND_1");
 
