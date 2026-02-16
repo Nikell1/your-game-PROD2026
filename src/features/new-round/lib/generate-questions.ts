@@ -7,10 +7,12 @@ import {
 } from "@/entities/game";
 import { getRandomItems } from "@/shared/lib";
 import { filterMaterial } from "./filter-material";
-import { generateCats } from "./generate-cats";
+import { generateCats } from "@/features/cat-in-bag";
 
 interface Props {
   setMaterial: (material: IThemeWithQuestions[]) => void;
+  setUsedThemesIds: (newThemes: string[]) => void;
+  setUsedQuestionsIds: (newQuestions: string[]) => void;
   difficulty: TQuestionDifficulty;
   step: number;
 }
@@ -19,6 +21,8 @@ export async function generateQuestions({
   difficulty,
   step,
   setMaterial,
+  setUsedQuestionsIds,
+  setUsedThemesIds,
 }: Props) {
   const responseThemes = await fetch("/data/themes.json");
   const themes = await responseThemes.json();
@@ -36,15 +40,20 @@ export async function generateQuestions({
     step,
   });
 
-  const { extraMaterial } = generateCats({
-    step: ROUND_1_PRICE_STEP,
-    chosenMaterial,
-    allQuestions: questions,
-    allThemes: themes,
-    difficulty,
-    usedThemesIds: chosenThemesIds,
-    usedQuestionIds,
-  });
+  const { extraMaterial, newUsedQuestionsIds, newUsedThemesIds } = generateCats(
+    {
+      step: ROUND_1_PRICE_STEP,
+      chosenMaterial,
+      allQuestions: questions,
+      allThemes: themes,
+      difficulty,
+      usedThemesIds: chosenThemesIds,
+      usedQuestionIds,
+    },
+  );
+
+  setUsedQuestionsIds(newUsedQuestionsIds);
+  setUsedThemesIds(newUsedThemesIds);
 
   setMaterial(extraMaterial);
 }

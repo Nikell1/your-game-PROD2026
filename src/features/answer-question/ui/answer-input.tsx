@@ -3,9 +3,9 @@
 import { Button, Input } from "@/shared/ui";
 import { Send } from "lucide-react";
 import { useAnswerQuestion } from "../lib/use-answer-question";
-import { useCallback, useEffect, useRef } from "react";
-import { cn } from "@/shared/lib";
-import { useAnswerInputStore } from "../model/answer-input.store";
+import { useEffect, useRef } from "react";
+import { cn, createEnterListener } from "@/shared/lib";
+import { useAnswerInputStore } from "../model/answer-input-store";
 
 export function AnswerInput() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -13,25 +13,13 @@ export function AnswerInput() {
     useAnswerQuestion();
   const { isCorrect, inputValue, setInputValue } = useAnswerInputStore();
 
-  const handleKeyDown = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.key === "Enter") {
-        answerHandler(inputValue);
-      }
-    },
-    [answerHandler, inputValue],
-  );
-
   useEffect(() => {
     if (activePlayerId) {
-      window.addEventListener("keydown", handleKeyDown);
       inputRef.current?.focus();
+      const cleanup = createEnterListener(() => answerHandler(inputValue));
+      return cleanup;
     }
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown, activePlayerId]);
+  }, [activePlayerId, answerHandler, inputValue]);
 
   return (
     <div className="relative">

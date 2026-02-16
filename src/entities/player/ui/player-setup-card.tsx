@@ -1,8 +1,8 @@
 import { Button, Input } from "@/shared/ui";
 import { PlayerCardWrapper } from "./player-card-wrapper";
 import { Trash2 } from "lucide-react";
-import { ISetupPlayer } from "../player.types";
-import { MAX_NAME_LENGTH } from "../player.constants";
+import { ISetupPlayer } from "../player-types";
+import { MAX_NAME_LENGTH } from "../player-constants";
 
 interface PlayerSetupCardProps {
   player: ISetupPlayer;

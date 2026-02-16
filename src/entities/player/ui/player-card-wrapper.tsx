@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { ISetupPlayer } from "../player.types";
+import { ISetupPlayer } from "../player-types";
 import { cn } from "@/shared/lib";
 import { Frame } from "@/shared/ui";
 

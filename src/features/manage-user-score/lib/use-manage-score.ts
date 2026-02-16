@@ -1,5 +1,5 @@
 import { useGameStore } from "@/entities/game";
-import { MAX_SCORE, MIN_SCORE } from "../score.constants";
+import { MAX_SCORE, MIN_SCORE } from "../score-constants";
 
 export function useManageScore() {
   const { players, setPlayers } = useGameStore();

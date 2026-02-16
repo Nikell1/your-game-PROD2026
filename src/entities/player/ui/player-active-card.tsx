@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib";
-import { IActivePlayer } from "../player.types";
+import { IActivePlayer } from "../player-types";
 import { PlayerCardWrapper } from "./player-card-wrapper";
 
 interface PlayerActiveCardProps {

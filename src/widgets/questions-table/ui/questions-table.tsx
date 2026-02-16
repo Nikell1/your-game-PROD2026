@@ -2,8 +2,7 @@
 
 import { useGameStore } from "@/entities/game";
 import { useQuestionClick } from "@/features/question-click";
-import { cn } from "@/shared/lib";
-import { Button, Frame } from "@/shared/ui";
+import { Button, CatIcon, Frame } from "@/shared/ui";
 
 export function QuestionsTable() {
   const { material, answeredQuestionsIds, isOnDev } = useGameStore();
@@ -20,17 +19,15 @@ export function QuestionsTable() {
           {material.questions.map((question) => {
             if (!answeredQuestionsIds.includes(question.id)) {
               const isCat = question.specials === "cat_in_bag";
+              const showCats = isCat && isOnDev;
 
               return (
                 <Button
                   key={question.id}
-                  className={cn(
-                    "text-2xl w-18 h-full rounded-xl",
-                    isCat && isOnDev && "border-orange-400",
-                  )}
+                  className="text-2xl w-18 h-full rounded-xl"
                   onClick={() => questionClick(question)}
                 >
-                  {question.price}
+                  {showCats ? <CatIcon className="size-7" /> : question.price}
                 </Button>
               );
             } else {

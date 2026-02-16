@@ -5,7 +5,7 @@ import type {
   IGameQuestion,
   IThemeWithQuestions,
   TGameStatus,
-} from "../game.types";
+} from "../game-types";
 
 interface GameStoreState {
   status: TGameStatus;
@@ -15,6 +15,8 @@ interface GameStoreState {
   isOnDev: boolean;
   answeredQuestionsIds: string[];
   material: IThemeWithQuestions[];
+  usedThemesIds: string[];
+  usedQuestionsIds: string[];
 }
 
 interface GameStoreActions {
@@ -25,6 +27,8 @@ interface GameStoreActions {
   setIsOnDev: () => void;
   setAnsweredQuestionsIds: (answeredQuesitons: string[]) => void;
   setMaterial: (material: IThemeWithQuestions[]) => void;
+  setUsedThemesIds: (newThemes: string[]) => void;
+  setUsedQuestionsIds: (newQuestions: string[]) => void;
 }
 
 const initialState: GameStoreState = {
@@ -35,6 +39,8 @@ const initialState: GameStoreState = {
   currentQuestion: null,
   isOnDev: false,
   answeredQuestionsIds: [],
+  usedThemesIds: [],
+  usedQuestionsIds: [],
 };
 
 interface IGameStore extends GameStoreState, GameStoreActions {}
@@ -58,6 +64,11 @@ export const useGameStore = create<IGameStore>()(
       setStatus: (status) => set({ status: status }),
 
       setMaterial: (material) => set({ material: material }),
+
+      setUsedThemesIds: (newThemes) => set({ usedThemesIds: newThemes }),
+
+      setUsedQuestionsIds: (newQuestions) =>
+        set({ usedQuestionsIds: newQuestions }),
     }),
     {
       name: "game-storage",

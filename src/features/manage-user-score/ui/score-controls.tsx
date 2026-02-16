@@ -3,7 +3,7 @@
 import { IActivePlayer } from "@/entities/player";
 import { Button } from "@/shared/ui";
 import { useManageScore } from "../lib/use-manage-score";
-import { DEV_MODE_SCORE_BUTTON_POINT } from "../score.constants";
+import { DEV_MODE_SCORE_BUTTON_POINT } from "../score-constants";
 import { useGameStore } from "@/entities/game";
 
 interface ScoreControlsProps {
@@ -30,7 +30,9 @@ export function ScoreControls({ player }: ScoreControlsProps) {
           >
             -
           </Button>
+
           <p className="text-xl w-full text-center py-1">{player.score}</p>
+
           <Button
             onClick={() =>
               increaseScore(player.id, DEV_MODE_SCORE_BUTTON_POINT)

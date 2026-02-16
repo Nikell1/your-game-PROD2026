@@ -1,6 +1,6 @@
 import { QUESTIONS_COUNT, THEMES_COUNT, useGameStore } from "@/entities/game";
 import { useManageScore } from "@/features/manage-user-score";
-import { useAnswerInputStore } from "../model/answer-input.store";
+import { useAnswerInputStore } from "../model/answer-input-store";
 import { useReturnToTable } from "@/features/return-to-table";
 
 export function useAnswerQuestion() {
@@ -12,6 +12,7 @@ export function useAnswerQuestion() {
     answeredQuestionsIds,
     currentQuestion,
   } = useGameStore();
+
   const { increaseScore, decreaseScore } = useManageScore();
   const { isCorrect, setIsCorrect } = useAnswerInputStore();
   const returnToTable = useReturnToTable();
@@ -24,6 +25,7 @@ export function useAnswerQuestion() {
         increaseScore(activePlayerId, currentQuestion.price);
 
         const newAnswered = [currentQuestion.id, ...answeredQuestionsIds];
+
         setAnsweredQuestionsIds(newAnswered);
 
         if (answeredQuestionsIds.length === THEMES_COUNT * QUESTIONS_COUNT) {

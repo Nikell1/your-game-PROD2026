@@ -1,1 +1,1 @@
-export * from "./pages-url.config";
+export * from "./pages-url-config";

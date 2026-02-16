@@ -17,6 +17,8 @@ export function useNewRound() {
     setMaterial,
     setActivePlayerId,
     setAnsweredQuestionsIds,
+    setUsedQuestionsIds,
+    setUsedThemesIds,
   } = useGameStore();
   const router = useRouter();
 
@@ -28,12 +30,14 @@ export function useNewRound() {
 
     generateQuestions({
       setMaterial,
+      setUsedQuestionsIds,
+      setUsedThemesIds,
       difficulty: "easy",
       step: ROUND_1_PRICE_STEP,
     });
 
     setStatus("ROUND_1");
 
-    router.push(GAME_ROUTES.ROUND_1);
+    router.replace(GAME_ROUTES.ROUND_1);
   };
 }

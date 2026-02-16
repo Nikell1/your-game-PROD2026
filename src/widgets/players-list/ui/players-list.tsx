@@ -8,7 +8,10 @@ export function PlayersList() {
   const { players, activePlayerId } = useGameStore();
   return (
     <div className="w-full absolute bottom-0">
-      <div className="w-full h-30 absolute bottom-0 bg-accent/50 backdrop-blur-xs border border-primary border-b-0 rounded-t-[80px]" />
+      <div
+        className="w-full h-30 absolute bottom-0 bg-accent/50 backdrop-blur-xs 
+      border border-primary border-b-0 rounded-t-[80px]"
+      />
 
       <div className="flex flex-row-reverse gap-15 px-20">
         {players.map((player) => (

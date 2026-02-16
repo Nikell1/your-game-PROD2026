@@ -8,9 +8,10 @@ import {
 } from "@/entities/player";
 import { Button } from "@/shared/ui";
 import { Header } from "@/widgets";
-import { useSetupGameStore } from "../model/setup-game.store";
-import { useCallback, useEffect, useMemo } from "react";
+import { useSetupGameStore } from "../model/setup-game-store";
+import { useEffect, useMemo } from "react";
 import { useNewRound } from "@/features/new-round";
+import { createEnterListener } from "@/shared/lib";
 
 export function SetupGamePage() {
   const {
@@ -29,22 +30,14 @@ export function SetupGamePage() {
     [playersData],
   );
 
-  const handleKeyDown = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.key === "Enter" && isPlayersValid) {
+  useEffect(() => {
+    const cleanup = createEnterListener(() => {
+      if (isPlayersValid) {
         startGame({ playersData, resetSetupGameStore });
       }
-    },
-    [playersData, resetSetupGameStore, startGame, isPlayersValid],
-  );
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
+    });
+    return cleanup;
+  }, [isPlayersValid, playersData, resetSetupGameStore, startGame]);
 
   const isRemoveBtnDisabled = useMemo(() => MIN_PLAYERS >= players, [players]);
   const isAddBtnDisabled = useMemo(() => MAX_PLAYERS > players, [players]);

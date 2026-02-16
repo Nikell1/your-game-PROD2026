@@ -4,3 +4,4 @@ export * from "./input";
 export * from "./backgrounds/hexagon";
 export * from "./frame";
 export * from "./switch";
+export * from "./vectors/cat-icon";

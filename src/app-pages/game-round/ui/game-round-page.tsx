@@ -2,6 +2,7 @@
 
 import { useGameStore, getRoundTitle } from "@/entities/game";
 import { Header, HostWidget, QuestionsTable, PlayersList } from "@/widgets";
+import { ModalWidget } from "@/widgets/modal";
 
 export function GameRoundPage() {
   const { status } = useGameStore();
@@ -20,6 +21,7 @@ export function GameRoundPage() {
       </div>
 
       <PlayersList />
+      <ModalWidget />
     </>
   );
 }

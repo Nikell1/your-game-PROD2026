@@ -20,9 +20,12 @@ export function CurrentQuestionWidget() {
         <span className={elementClass}>
           Тема: {currentQuestion?.themeLabel}
         </span>
+
         <span className={elementClass}>Цена: {currentQuestion?.price}</span>
       </div>
+
       <p className="text-3xl flex-1">{currentQuestion?.label}</p>
+
       {shouldShowAnswerInput && <AnswerInput />}
     </Frame>
   );
