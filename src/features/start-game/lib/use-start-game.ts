@@ -17,7 +17,7 @@ export function useStartGame() {
 
   return ({ playersData, resetSetupGameStore }: Props) => {
     setGamePlayers({ playersData, setPlayers });
-    setActivePlayerId(0);
+    setActivePlayerId(1);
     resetSetupGameStore();
 
     generateQuestions({

@@ -1,13 +1,12 @@
 import { useGameStore } from "@/entities/game";
 import { useManageScore } from "@/features/manage-user-score";
-import { useState } from "react";
-
-type IsCorrect = boolean | null;
+import { useAnswerInputStore } from "../model/answer-input.store";
 
 export function useAnswerQuestion() {
-  const { currentQuestionId, questions, activePlayerId } = useGameStore();
+  const { currentQuestionId, questions, activePlayerId, setActivePlayerId } =
+    useGameStore();
   const { increaseScore, decreaseScore } = useManageScore();
-  const [isCorrect, setIsCorrect] = useState<IsCorrect>(null);
+  const { isCorrect, setIsCorrect } = useAnswerInputStore();
 
   const currentQuestion = questions.find((q) => q.id === currentQuestionId);
 
@@ -20,6 +19,8 @@ export function useAnswerQuestion() {
         setIsCorrect(false);
         decreaseScore(activePlayerId, currentQuestion.price);
       }
+
+      setActivePlayerId(null);
     } else {
       setIsCorrect(null);
     }

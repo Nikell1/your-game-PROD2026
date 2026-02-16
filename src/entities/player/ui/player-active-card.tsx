@@ -16,7 +16,7 @@ export function PlayerActiveCard({
   return (
     <PlayerCardWrapper
       player={player}
-      style={{ boxShadow: `0 0 10px 0 ${player.color}40` }}
+      style={isActive ? { boxShadow: `0 0 10px 0 ${player.color}40` } : {}}
       className={cn(
         "border-b-0! rounded-b-none transition-all duration-300",
         isActive && "scale-115 -translate-y-6 shadow-md",

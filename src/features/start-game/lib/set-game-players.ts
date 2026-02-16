@@ -8,7 +8,7 @@ interface Props {
 export function setGamePlayers({ playersData, setPlayers }: Props) {
   const activePlayers: IActivePlayer[] = playersData.map((player, index) => ({
     ...player,
-    id: index,
+    id: index + 1,
     score: 0,
   }));
 
