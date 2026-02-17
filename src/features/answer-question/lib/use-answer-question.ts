@@ -20,7 +20,8 @@ export function useAnswerQuestion() {
 
   function answerHandler(answer: string) {
     if (currentQuestion && activePlayerId) {
-      if (currentQuestion.correctAnswer === answer) {
+      if (currentQuestion.correctAnswer.toLowerCase().replace(/\s/g, "") === answer.toLowerCase().replace(/\s/g, "")) {
+        console.log(currentQuestion.correctAnswer.toLowerCase().replace(/\s/g, ""))
         setIsCorrect(true);
 
         increaseScore(activePlayerId, currentQuestion.price);
