@@ -2,7 +2,7 @@ import { useGameStore } from "@/entities/game";
 import { Frame } from "@/shared/ui";
 import Image from "next/image";
 
-export function HostWidget({ seconds }: { seconds: number }) {
+export function HostWidget({ seconds }: { seconds?: number }) {
   const { currentQuestion } = useGameStore();
 
   return (

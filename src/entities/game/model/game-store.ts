@@ -12,6 +12,7 @@ interface GameStoreState {
   status: TGameStatus;
   players: IActivePlayer[];
   activePlayerId: number | null;
+  prevActivePlayerId: number | null;
   currentQuestion: IGameQuestion | null;
   isOnDev: boolean;
   answeredQuestionsIds: string[];
@@ -26,6 +27,7 @@ interface GameStoreActions {
   setPlayers: (players: IActivePlayer[]) => void;
   setStatus: (status: TGameStatus) => void;
   setActivePlayerId: (id: number | null) => void;
+  setPrevActivePlayerId: (id: number | null) => void;
   setCurrentQuestion: (question: IGameQuestion | null) => void;
   setIsOnDev: () => void;
   setAnsweredQuestionsIds: (answeredQuesitons: string[]) => void;
@@ -49,6 +51,7 @@ const initialState: GameStoreState = {
   usedQuestionsIds: [],
   timerSeconds: DEFAULT_TIMER_SECONDS,
   isTimerActive: false,
+  prevActivePlayerId: null,
 };
 
 interface IGameStore extends GameStoreState, GameStoreActions {}
@@ -78,6 +81,8 @@ export const useGameStore = create<IGameStore>()(
       setPlayers: (players) => set({ players: players }),
 
       setActivePlayerId: (id) => set({ activePlayerId: id }),
+
+      setPrevActivePlayerId: (id) => set({ prevActivePlayerId: id }),
 
       setStatus: (status) => set({ status: status }),
 

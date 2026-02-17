@@ -13,12 +13,15 @@ export function useQuestionClick() {
     setCurrentQuestion,
     setIsTimerActive,
     setTimerSeconds,
+    setPrevActivePlayerId,
+    activePlayerId,
   } = useGameStore();
   const { showCatModal } = useCatModal();
   const router = useRouter();
 
   return (question: IGameQuestion) => {
     if (question.specials === "default") {
+      setPrevActivePlayerId(activePlayerId);
       setActivePlayerId(null);
       setCurrentQuestion(question);
       setIsTimerActive(true);

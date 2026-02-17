@@ -7,6 +7,8 @@ export function useAnswerTimeout() {
     answeredQuestionsIds,
     setAnsweredQuestionsIds,
     setCurrentQuestion,
+    setActivePlayerId,
+    prevActivePlayerId,
   } = useGameStore();
   const returnToTable = useReturnToTable();
   return () => {
@@ -16,6 +18,8 @@ export function useAnswerTimeout() {
       setAnsweredQuestionsIds(newAnswered);
 
       setCurrentQuestion(null);
+
+      setActivePlayerId(prevActivePlayerId);
 
       returnToTable();
     }
