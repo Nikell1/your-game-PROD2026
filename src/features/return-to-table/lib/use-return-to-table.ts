@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 
 export function useReturnToTable() {
   const router = useRouter();
-  const { resetStore } = useAnswerInputStore();
+  const { resetAnswerInputStore } = useAnswerInputStore();
 
   return () => {
-    resetStore();
+    resetAnswerInputStore();
 
     router.push(GAME_ROUTES.ROUND_1);
   };
