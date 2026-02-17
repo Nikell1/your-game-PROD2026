@@ -25,9 +25,6 @@ export function useAnswerQuestion(clear: () => void, resume: () => void) {
         currentQuestion.correctAnswer.toLowerCase().replace(/\s/g, "") ===
         answer.toLowerCase().replace(/\s/g, "")
       ) {
-        console.log(
-          currentQuestion.correctAnswer.toLowerCase().replace(/\s/g, ""),
-        );
         setIsCorrect(true);
 
         increaseScore(activePlayerId, currentQuestion.price);
@@ -37,8 +34,6 @@ export function useAnswerQuestion(clear: () => void, resume: () => void) {
         setAnsweredQuestionsIds(newAnswered);
 
         clear();
-
-        setIsTimerActive(true);
 
         setCurrentQuestion(null);
 
@@ -53,6 +48,8 @@ export function useAnswerQuestion(clear: () => void, resume: () => void) {
         decreaseScore(activePlayerId, currentQuestion.price);
 
         resume();
+
+        setIsTimerActive(true);
 
         setActivePlayerId(null);
       }

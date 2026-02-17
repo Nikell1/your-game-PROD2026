@@ -1,10 +1,7 @@
 "use client";
 
-import {
-  useGameStore,
-  getRoundTitle,
-  DEFAULT_TIMER_SECONDS,
-} from "@/entities/game";
+import { useGameStore, getRoundTitle } from "@/entities/game";
+import { useAnswerTimeout } from "@/features/answer-question";
 import { useKeysClick } from "@/features/keys-click";
 import {
   CurrentQuestionWidget,
@@ -13,7 +10,7 @@ import {
   PlayersList,
 } from "@/widgets";
 import { useTimer } from "@siberiacancode/reactuse";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 export function QuestionPage() {
   const {
@@ -23,8 +20,20 @@ export function QuestionPage() {
     timerSeconds,
     setTimerSeconds,
   } = useGameStore();
-  const timer = useTimer(timerSeconds, { immediately: isTimerActive });
+
+  const questionTimeOut = useAnswerTimeout();
+
+  const timer = useTimer(timerSeconds, {
+    immediately: isTimerActive,
+  });
+
   const { handleKeyDown } = useKeysClick(timer.pause);
+
+  useEffect(() => {
+    if (timer.seconds === 0 && isTimerActive) {
+      questionTimeOut();
+    }
+  }, [timer.seconds, isTimerActive, questionTimeOut]);
 
   useEffect(() => {
     if (timerSeconds !== timer.seconds && isTimerActive) {
