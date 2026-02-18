@@ -6,16 +6,16 @@ import { createEnterListener } from "@/shared/lib";
 
 export function CatInputPlayer() {
   const inputRef = useRef<HTMLInputElement>(null);
-  const { inputValue, setAndValidateInputValue, closeCatModal, isBtnDisabled } =
+  const { inputValue, setAndValidateInputValue, submitPlayer, isBtnDisabled } =
     useCatModal();
 
   useEffect(() => {
     inputRef.current?.focus();
     if (!isBtnDisabled) {
-      const cleanup = createEnterListener(() => closeCatModal());
+      const cleanup = createEnterListener(() => submitPlayer(inputValue));
       return cleanup;
     }
-  }, [closeCatModal, isBtnDisabled]);
+  }, [submitPlayer, isBtnDisabled, inputValue]);
 
   return (
     <div className="relative w-full">
@@ -29,7 +29,7 @@ export function CatInputPlayer() {
       <Button
         variant="ghost"
         className="absolute right-0 bottom-0"
-        onClick={closeCatModal}
+        onClick={() => submitPlayer(inputValue)}
         disabled={isBtnDisabled}
       >
         <Send size={30} />

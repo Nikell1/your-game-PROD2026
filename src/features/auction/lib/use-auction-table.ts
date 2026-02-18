@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useAuctionStore } from "../model/auction-store";
-import { DEFAULT_TIMER_SECONDS, useGameStore } from "@/entities/game";
+import {
+  createCurrentQuestion,
+  DEFAULT_TIMER_SECONDS,
+  useGameStore,
+} from "@/entities/game";
 import { useRouter } from "next/navigation";
 import { GAME_ROUTES } from "@/shared/config";
 
@@ -37,17 +41,13 @@ export function useAuctionTable() {
 
       setActivePlayerId(winner.id);
       setPrevActivePlayerId(winner.id);
-      setCurrentQuestion({
-        id: currentQuestion?.id || "",
-        themeId: currentQuestion?.themeId || "",
-        themeLabel: currentQuestion?.themeLabel || "",
-        label: currentQuestion?.label || "",
-        correctAnswer: currentQuestion?.correctAnswer || "",
-        difficulty: currentQuestion?.difficulty || "easy",
-        price: winner.bet,
-        isAnswering: true,
-        specials: "auction",
-      });
+      setCurrentQuestion(
+        createCurrentQuestion(currentQuestion, {
+          price: winner.bet,
+          isAnswering: true,
+          specials: "auction",
+        }),
+      );
       setIsTimerActive(true);
       setTimerSeconds(DEFAULT_TIMER_SECONDS);
       router.replace(GAME_ROUTES.QUESTION(currentQuestion?.id || "0"));

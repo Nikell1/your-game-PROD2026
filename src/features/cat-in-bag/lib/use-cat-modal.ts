@@ -3,18 +3,29 @@ import { useModalStore } from "@/shared/model";
 import { useState } from "react";
 
 export function useCatModal() {
-  const { setModalState, inputValue, setInputValue, resetModalStore } =
-    useModalStore();
+  const {
+    setModalState,
+    inputValue,
+    setInputValue,
+    resetModalStore,
+    setIsCatPlayer,
+  } = useModalStore();
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
-  const { players } = useGameStore();
+  const { players, setActivePlayerId, setPrevActivePlayerId } = useGameStore();
 
   function showCatModal() {
     resetModalStore();
     setModalState("cat_in_bag");
   }
 
-  function closeCatModal() {
-    resetModalStore();
+  function submitPlayer(value: string) {
+    const chosenPlayer = players.find(
+      (player) => player.name.toLowerCase() === value.toLowerCase(),
+    );
+
+    setActivePlayerId(chosenPlayer?.id || -1);
+    setPrevActivePlayerId(chosenPlayer?.id || -1);
+    setIsCatPlayer(true);
   }
 
   function setAndValidateInputValue(value: string) {
@@ -33,7 +44,7 @@ export function useCatModal() {
 
   return {
     showCatModal,
-    closeCatModal,
+    submitPlayer,
     inputValue,
     setAndValidateInputValue,
     isBtnDisabled,

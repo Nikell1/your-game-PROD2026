@@ -6,6 +6,7 @@ import { useAnswerQuestion } from "../lib/use-answer-question";
 import { useEffect, useRef } from "react";
 import { cn, createEnterListener } from "@/shared/lib";
 import { useAnswerInputStore } from "../model/answer-input-store";
+import { useGameStore } from "@/entities/game";
 
 export function AnswerInput({
   clear,
@@ -17,15 +18,19 @@ export function AnswerInput({
   const inputRef = useRef<HTMLInputElement>(null);
   const { answerHandler, currentQuestion, isOnDev, activePlayerId } =
     useAnswerQuestion(clear, resume);
+  const { isTimerActive } = useGameStore();
   const { isCorrect, inputValue, setInputValue } = useAnswerInputStore();
 
   useEffect(() => {
     if (activePlayerId) {
-      inputRef.current?.focus();
       const cleanup = createEnterListener(() => answerHandler(inputValue));
+      if (!isTimerActive) {
+        inputRef.current?.focus();
+      }
+
       return cleanup;
     }
-  }, [activePlayerId, answerHandler, inputValue]);
+  }, [activePlayerId, answerHandler, inputValue, isTimerActive]);
 
   return (
     <div className="relative">

@@ -6,12 +6,14 @@ type TModalState = "closed" | "cat_in_bag" | "auction" | "exit_submit";
 interface ModalState {
   modalState: TModalState;
   inputValue: string;
+  isCatPlayer: boolean;
 }
 
 interface ModalActions {
   setModalState: (state: TModalState) => void;
   setInputValue: (value: string) => void;
   resetModalStore: () => void;
+  setIsCatPlayer: (is: boolean) => void;
 }
 
 interface ModalStoreState extends ModalState, ModalActions {}
@@ -19,12 +21,15 @@ interface ModalStoreState extends ModalState, ModalActions {}
 const initialState: ModalState = {
   modalState: "closed",
   inputValue: "",
+  isCatPlayer: false,
 };
 
 export const useModalStore = create<ModalStoreState>()(
   persist(
     (set) => ({
       ...initialState,
+
+      setIsCatPlayer: (is) => set({ isCatPlayer: is }),
 
       setModalState: (state) => set({ modalState: state }),
 
