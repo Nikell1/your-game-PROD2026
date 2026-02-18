@@ -40,6 +40,7 @@ interface GameStoreActions {
   resetStore: () => void;
   setIsTimerActive: (is: boolean) => void;
   setSpecials: (special: TQuestionSpecials) => void;
+  resetRound: () => void;
 }
 
 const initialState: GameStoreState = {
@@ -94,11 +95,26 @@ export const useGameStore = create<IGameStore>()(
 
       setMaterial: (material) => set({ material: material }),
 
-      setUsedThemesIds: (newThemes) => set({ usedThemesIds: newThemes }),
+      setUsedThemesIds: (newThemes) =>
+        set((state) => ({
+          usedThemesIds: [...state.usedThemesIds, ...newThemes],
+        })),
+
+      resetRound: () =>
+        set((state) => ({
+          ...initialState,
+          players: state.players,
+          isOnDev: state.isOnDev,
+          usedQuestionsIds: state.usedQuestionsIds,
+          usedThemesIds: state.usedThemesIds,
+        })),
 
       setUsedQuestionsIds: (newQuestions) =>
-        set({ usedQuestionsIds: newQuestions }),
+        set((state) => ({
+          usedQuestionsIds: [...state.usedQuestionsIds, ...newQuestions],
+        })),
     }),
+
     {
       name: "game-storage",
     },

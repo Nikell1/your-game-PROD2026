@@ -1,11 +1,16 @@
+"use client";
+
 import { Badge, Button } from "@/shared/ui";
 import { Play, Swords } from "lucide-react";
 import Link from "next/link";
 import { ButtonList } from "./button-list";
 import { PROJECT_NAME } from "@/shared/constants";
 import { GAME_ROUTES } from "@/shared/config";
+import { useGameStore } from "@/entities/game";
 
 export function MainMenuPage() {
+  const { setStatus } = useGameStore();
+
   return (
     <>
       <div className="w-full py-20 h-full overflow-hidden flex flex-col justify-between">
@@ -22,7 +27,11 @@ export function MainMenuPage() {
 
         <main className="flex flex-col gap-40">
           <Button className="flex mx-auto scale-150 w-40" asChild>
-            <Link className="flex items-center" href={GAME_ROUTES.SETUP}>
+            <Link
+              className="flex items-center"
+              href={GAME_ROUTES.SETUP}
+              onClick={() => setStatus("CREATING")}
+            >
               <Play fill="white" />
               <span>Создать игру</span>
             </Link>

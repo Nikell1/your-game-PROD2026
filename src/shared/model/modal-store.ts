@@ -1,7 +1,12 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-type TModalState = "closed" | "cat_in_bag" | "auction" | "exit_submit";
+type TModalState =
+  | "closed"
+  | "cat_in_bag"
+  | "auction"
+  | "exit_submit"
+  | "round_results";
 
 interface ModalState {
   modalState: TModalState;

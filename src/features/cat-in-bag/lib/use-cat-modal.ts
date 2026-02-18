@@ -11,7 +11,8 @@ export function useCatModal() {
     setIsCatPlayer,
   } = useModalStore();
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
-  const { players, setActivePlayerId, setPrevActivePlayerId } = useGameStore();
+  const { players, setActivePlayerId, setPrevActivePlayerId, setSpecials } =
+    useGameStore();
 
   function showCatModal() {
     resetModalStore();
@@ -26,6 +27,7 @@ export function useCatModal() {
     setActivePlayerId(chosenPlayer?.id || -1);
     setPrevActivePlayerId(chosenPlayer?.id || -1);
     setIsCatPlayer(true);
+    setSpecials("cat_in_bag");
   }
 
   function setAndValidateInputValue(value: string) {

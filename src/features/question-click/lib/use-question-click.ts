@@ -34,10 +34,12 @@ export function useQuestionClick() {
 
     if (question.specials === "cat_in_bag") {
       showCatModal();
+      setActivePlayerId(null);
       setCurrentQuestion({ ...question, isAnswering: false });
     }
 
     if (question.specials === "auction") {
+      setActivePlayerId(null);
       showAuctionModal();
       setCurrentQuestion({ ...question, isAnswering: false });
     }

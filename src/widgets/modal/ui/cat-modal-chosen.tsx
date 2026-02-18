@@ -1,12 +1,19 @@
+import { QUESTIONS_COUNT } from "@/entities/game";
 import { Button, CatIcon } from "@/shared/ui";
 
 interface Props {
   name?: string;
   onLeftClick: () => void;
   onRightClick: () => void;
+  bet: number;
 }
 
-export function CatModalChosen({ name, onLeftClick, onRightClick }: Props) {
+export function CatModalChosen({
+  name,
+  onLeftClick,
+  onRightClick,
+  bet,
+}: Props) {
   return (
     <>
       <div className=" flex flex-col gap-4 items-center">
@@ -17,10 +24,10 @@ export function CatModalChosen({ name, onLeftClick, onRightClick }: Props) {
 
       <div className="flex gap-8">
         <Button onClick={onLeftClick} className="text-2xl p-6">
-          100
+          {bet}
         </Button>
         <Button onClick={onRightClick} className="text-2xl p-6">
-          500
+          {bet * QUESTIONS_COUNT}
         </Button>
       </div>
     </>

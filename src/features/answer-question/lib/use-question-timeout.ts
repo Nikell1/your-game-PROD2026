@@ -28,7 +28,10 @@ export function useAnswerTimeout() {
 
       setSpecials("default");
 
-      if (currentQuestion.specials === "auction") {
+      if (
+        currentQuestion.specials === "auction" ||
+        currentQuestion.specials === "cat_in_bag"
+      ) {
         decreaseScore(prevActivePlayerId || -1, currentQuestion.price);
       }
 

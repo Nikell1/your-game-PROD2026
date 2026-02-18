@@ -1,4 +1,4 @@
-import { QUESTIONS_COUNT, THEMES_COUNT, useGameStore } from "@/entities/game";
+import { useGameStore } from "@/entities/game";
 import { useManageScore } from "@/features/manage-user-score";
 import { useAnswerInputStore } from "../model/answer-input-store";
 import { useReturnToTable } from "@/features/return-to-table";
@@ -41,13 +41,10 @@ export function useAnswerQuestion(clear: () => void, resume: () => void) {
 
         setCurrentQuestion(null);
 
-        if (answeredQuestionsIds.length === THEMES_COUNT * QUESTIONS_COUNT) {
-          console.log("new round");
-        }
-
         returnToTable();
       } else {
         decreaseScore(activePlayerId, currentQuestion.price);
+
         if (specials === "default") {
           setIsCorrect(false);
 
@@ -56,7 +53,7 @@ export function useAnswerQuestion(clear: () => void, resume: () => void) {
           setIsTimerActive(true);
 
           setActivePlayerId(null);
-        } else if (specials === "auction") {
+        } else if (specials === "auction" || specials === "cat_in_bag") {
           const newAnswered = [currentQuestion.id, ...answeredQuestionsIds];
 
           setAnsweredQuestionsIds(newAnswered);

@@ -1,14 +1,29 @@
 "use client";
 
-import { useGameStore, getRoundTitle } from "@/entities/game";
+import {
+  useGameStore,
+  getRoundTitle,
+  QUESTIONS_COUNT,
+  THEMES_COUNT,
+} from "@/entities/game";
+import { useModalStore } from "@/shared/model";
 import { Header, HostWidget, QuestionsTable, PlayersList } from "@/widgets";
 import { AuctionWidget } from "@/widgets/auction/ui/auction-widget";
 import { ModalWidget } from "@/widgets/modal";
 
+import { useEffect } from "react";
+
 export function GameRoundPage() {
-  const { status, specials } = useGameStore();
+  const { status, specials, answeredQuestionsIds } = useGameStore();
+  const { setModalState } = useModalStore();
 
   const headerTitle = getRoundTitle(status);
+
+  useEffect(() => {
+    if (answeredQuestionsIds.length === QUESTIONS_COUNT * THEMES_COUNT) {
+      setModalState("round_results");
+    }
+  }, [answeredQuestionsIds, setModalState]);
 
   return (
     <>
