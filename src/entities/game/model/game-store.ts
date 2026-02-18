@@ -1,120 +1,82 @@
-import { IActivePlayer } from "@/entities/player";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type {
-  ICurrentQuestion,
-  IThemeWithQuestions,
-  TGameStatus,
-  TQuestionSpecials,
-} from "../game-types";
+import {
+  devModeSlice,
+  DevModeSlice,
+  gamePlayersSlice,
+  GamePlayersSlice,
+  gameStatusSlice,
+  GameStatusSlice,
+  questionSlice,
+  QuestionSlice,
+  timerSlice,
+  TimerSlice,
+  usedIdsSlice,
+  UsedIdsSlice,
+} from "./slices";
 import { DEFAULT_TIMER_SECONDS } from "../game-constants";
+import { TGameStatus, TQuestionSpecials } from "../game-types";
 
-interface GameStoreState {
-  status: TGameStatus;
-  players: IActivePlayer[];
-  activePlayerId: number | null;
-  prevActivePlayerId: number | null;
-  currentQuestion: ICurrentQuestion | null;
-  isOnDev: boolean;
-  answeredQuestionsIds: string[];
-  material: IThemeWithQuestions[];
-  usedThemesIds: string[];
-  usedQuestionsIds: string[];
-  timerSeconds: number;
-  isTimerActive: boolean;
-  specials: TQuestionSpecials;
-}
-
-interface GameStoreActions {
-  setPlayers: (players: IActivePlayer[]) => void;
-  setStatus: (status: TGameStatus) => void;
-  setActivePlayerId: (id: number | null) => void;
-  setPrevActivePlayerId: (id: number | null) => void;
-  setCurrentQuestion: (question: ICurrentQuestion | null) => void;
-  setIsOnDev: () => void;
-  setAnsweredQuestionsIds: (answeredQuesitons: string[]) => void;
-  setMaterial: (material: IThemeWithQuestions[]) => void;
-  setUsedThemesIds: (newThemes: string[]) => void;
-  setUsedQuestionsIds: (newQuestions: string[]) => void;
-  setTimerSeconds: (time: number | ((prev: number) => number)) => void;
+interface IGameStore
+  extends
+    DevModeSlice,
+    GamePlayersSlice,
+    QuestionSlice,
+    GameStatusSlice,
+    TimerSlice,
+    UsedIdsSlice {
   resetStore: () => void;
-  setIsTimerActive: (is: boolean) => void;
-  setSpecials: (special: TQuestionSpecials) => void;
   resetRound: () => void;
 }
 
-const initialState: GameStoreState = {
-  status: "NOT_STARTED",
-  players: [],
-  material: [],
-  activePlayerId: null,
-  currentQuestion: null,
-  isOnDev: false,
-  answeredQuestionsIds: [],
-  usedThemesIds: [],
-  usedQuestionsIds: [],
+const roundInitialState = {
   timerSeconds: DEFAULT_TIMER_SECONDS,
   isTimerActive: false,
+  currentQuestion: null,
+  answeredQuestionsIds: [],
+  material: [],
+  specials: "default" as TQuestionSpecials,
   prevActivePlayerId: null,
-  specials: "default",
 };
 
-interface IGameStore extends GameStoreState, GameStoreActions {}
+const fullInitialState = {
+  status: "NOT_STARTED" as TGameStatus,
+  players: [],
+  activePlayerId: null,
+  isOnDev: false,
+  usedThemesIds: [],
+  usedQuestionsIds: [],
+  ...roundInitialState,
+};
 
 export const useGameStore = create<IGameStore>()(
   persist(
-    (set) => ({
-      ...initialState,
+    (set, get, store) => ({
+      ...devModeSlice(set, get, store),
+      ...gamePlayersSlice(set, get, store),
+      ...questionSlice(set, get, store),
+      ...gameStatusSlice(set, get, store),
+      ...timerSlice(set, get, store),
+      ...usedIdsSlice(set, get, store),
 
-      setSpecials: (specials) => set({ specials: specials }),
+      resetStore: () => {
+        set(fullInitialState);
+      },
 
-      setIsTimerActive: (is) => set({ isTimerActive: is }),
+      resetRound: () => {
+        const state = get();
+        const playerWithMinScore = state.getPlayerWithMinScore();
 
-      setTimerSeconds: (time) =>
-        set((state) => ({
-          timerSeconds:
-            typeof time === "function" ? time(state.timerSeconds) : time,
-        })),
-
-      resetStore: () => set({ ...initialState }),
-
-      setIsOnDev: () => set((state) => ({ isOnDev: !state.isOnDev })),
-
-      setAnsweredQuestionsIds: (answeredQuestions) =>
-        set({ answeredQuestionsIds: answeredQuestions }),
-
-      setCurrentQuestion: (question) => set({ currentQuestion: question }),
-
-      setPlayers: (players) => set({ players: players }),
-
-      setActivePlayerId: (id) => set({ activePlayerId: id }),
-
-      setPrevActivePlayerId: (id) => set({ prevActivePlayerId: id }),
-
-      setStatus: (status) => set({ status: status }),
-
-      setMaterial: (material) => set({ material: material }),
-
-      setUsedThemesIds: (newThemes) =>
-        set((state) => ({
-          usedThemesIds: [...state.usedThemesIds, ...newThemes],
-        })),
-
-      resetRound: () =>
-        set((state) => ({
-          ...initialState,
+        set({
+          ...roundInitialState,
           players: state.players,
           isOnDev: state.isOnDev,
+          activePlayerId: playerWithMinScore?.id || null,
           usedQuestionsIds: state.usedQuestionsIds,
           usedThemesIds: state.usedThemesIds,
-        })),
-
-      setUsedQuestionsIds: (newQuestions) =>
-        set((state) => ({
-          usedQuestionsIds: [...state.usedQuestionsIds, ...newQuestions],
-        })),
+        });
+      },
     }),
-
     {
       name: "game-storage",
     },

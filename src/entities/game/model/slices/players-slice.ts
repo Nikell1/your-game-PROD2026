@@ -1,0 +1,34 @@
+import { IActivePlayer } from "@/entities/player";
+import { StateCreator } from "zustand";
+
+export interface GamePlayersSlice {
+  players: IActivePlayer[];
+  activePlayerId: number | null;
+  prevActivePlayerId: number | null;
+
+  setPlayers: (players: IActivePlayer[]) => void;
+  setActivePlayerId: (id: number | null) => void;
+  setPrevActivePlayerId: (id: number | null) => void;
+  getPlayerWithMinScore: () => IActivePlayer | undefined;
+}
+
+export const gamePlayersSlice: StateCreator<GamePlayersSlice> = (set, get) => ({
+  players: [],
+  activePlayerId: null,
+  prevActivePlayerId: null,
+
+  getPlayerWithMinScore: () => {
+    const { players } = get();
+    if (players.length === 0) return undefined;
+
+    return players.reduce((min, player) =>
+      player.score < min.score ? player : min,
+    );
+  },
+
+  setPlayers: (players) => set({ players: players }),
+
+  setActivePlayerId: (id) => set({ activePlayerId: id }),
+
+  setPrevActivePlayerId: (id) => set({ prevActivePlayerId: id }),
+});
