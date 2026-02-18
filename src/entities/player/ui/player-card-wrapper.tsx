@@ -21,7 +21,7 @@ export function PlayerCardWrapper({
       style={style}
       color={player.color}
       className={cn(
-        " w-50 h-66 gap-2 items-center justify-between rounded-lg",
+        " w-50 h-66 gap-2 items-center justify-between rounded-lg flex-col p-4",
         className,
       )}
     >

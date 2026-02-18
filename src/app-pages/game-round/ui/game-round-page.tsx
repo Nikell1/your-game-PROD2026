@@ -2,10 +2,11 @@
 
 import { useGameStore, getRoundTitle } from "@/entities/game";
 import { Header, HostWidget, QuestionsTable, PlayersList } from "@/widgets";
+import { AuctionWidget } from "@/widgets/auction/ui/auction-widget";
 import { ModalWidget } from "@/widgets/modal";
 
 export function GameRoundPage() {
-  const { status } = useGameStore();
+  const { status, specials } = useGameStore();
 
   const headerTitle = getRoundTitle(status);
 
@@ -16,7 +17,9 @@ export function GameRoundPage() {
       <div className="flex w-full p-8 flex-1">
         <HostWidget />
         <div className="flex-1 flex justify-center">
-          <QuestionsTable />
+          {specials === "cat_in_bag" && <></>}
+          {specials === "auction" && <AuctionWidget />}
+          {specials === "default" && <QuestionsTable />}
         </div>
       </div>
 

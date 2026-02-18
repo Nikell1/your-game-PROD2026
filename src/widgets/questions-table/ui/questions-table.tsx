@@ -9,7 +9,7 @@ export function QuestionsTable() {
   const questionClick = useQuestionClick();
 
   return (
-    <Frame className="rounded-xl max-h-120 gap-6 px-8! py-6!">
+    <Frame className="rounded-xl max-h-120 gap-6 px-8! py-6! flex-col">
       {material.map((material) => (
         <div key={material.theme.id} className="flex gap-6">
           <Frame className="w-70 p-2! text-xl rounded-lg">

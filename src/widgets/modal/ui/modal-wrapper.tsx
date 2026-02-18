@@ -15,7 +15,7 @@ export function ModalWrapper({
       <Frame
         isSolid
         className={cn(
-          "absolute z-10 left-[50%] top-[43%] -translate-[50%] rounded-xl",
+          "absolute z-10 left-[50%] top-[43%] -translate-[50%] rounded-xl flex-col p-4",
           className,
         )}
       >

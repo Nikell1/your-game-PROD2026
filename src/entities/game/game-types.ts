@@ -39,3 +39,7 @@ export interface IGameQuestion extends IQuestion {
   price: number;
   specials: TQuestionSpecials;
 }
+
+export interface ICurrentQuestion extends IGameQuestion {
+  isAnswering: boolean;
+}

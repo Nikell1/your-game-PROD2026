@@ -8,12 +8,12 @@ export function HostWidget({ seconds }: { seconds?: number }) {
   return (
     <div className="flex flex-col h-full justify-between items-center relative z-3 shrink-0">
       <div>
-        <Frame className="rounded-lg size-60">
+        <Frame className="rounded-lg size-60 p-4">
           <p className="text-xl">Олег, выбирайте вопрос</p>
         </Frame>
 
-        {currentQuestion && (
-          <Frame className="rounded-md mt-6 flex-row! justify-between">
+        {currentQuestion && currentQuestion.isAnswering && (
+          <Frame className="rounded-md mt-4 w-full absolute justify-between p-4">
             <span>Оставшееся время:</span>
             <span>{seconds}</span>
           </Frame>

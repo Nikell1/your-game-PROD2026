@@ -21,7 +21,7 @@ export function CurrentQuestionWidget({
     "bg-primary/25 border py-3 px-6 rounded-lg text-2xl border-primary";
 
   return (
-    <Frame className="max-h-120 w-200 rounded-lg gap-4 p-6!">
+    <Frame className="max-h-120 w-200 rounded-lg gap-4 p-6 flex-col">
       <div className="flex justify-between">
         <span className={elementClass}>
           Тема: {currentQuestion?.themeLabel}

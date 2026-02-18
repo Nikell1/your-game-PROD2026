@@ -2,9 +2,10 @@ import { IActivePlayer } from "@/entities/player";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type {
-  IGameQuestion,
+  ICurrentQuestion,
   IThemeWithQuestions,
   TGameStatus,
+  TQuestionSpecials,
 } from "../game-types";
 import { DEFAULT_TIMER_SECONDS } from "../game-constants";
 
@@ -13,7 +14,7 @@ interface GameStoreState {
   players: IActivePlayer[];
   activePlayerId: number | null;
   prevActivePlayerId: number | null;
-  currentQuestion: IGameQuestion | null;
+  currentQuestion: ICurrentQuestion | null;
   isOnDev: boolean;
   answeredQuestionsIds: string[];
   material: IThemeWithQuestions[];
@@ -21,6 +22,7 @@ interface GameStoreState {
   usedQuestionsIds: string[];
   timerSeconds: number;
   isTimerActive: boolean;
+  specials: TQuestionSpecials;
 }
 
 interface GameStoreActions {
@@ -28,7 +30,7 @@ interface GameStoreActions {
   setStatus: (status: TGameStatus) => void;
   setActivePlayerId: (id: number | null) => void;
   setPrevActivePlayerId: (id: number | null) => void;
-  setCurrentQuestion: (question: IGameQuestion | null) => void;
+  setCurrentQuestion: (question: ICurrentQuestion | null) => void;
   setIsOnDev: () => void;
   setAnsweredQuestionsIds: (answeredQuesitons: string[]) => void;
   setMaterial: (material: IThemeWithQuestions[]) => void;
@@ -37,6 +39,7 @@ interface GameStoreActions {
   setTimerSeconds: (time: number | ((prev: number) => number)) => void;
   resetStore: () => void;
   setIsTimerActive: (is: boolean) => void;
+  setSpecials: (special: TQuestionSpecials) => void;
 }
 
 const initialState: GameStoreState = {
@@ -52,6 +55,7 @@ const initialState: GameStoreState = {
   timerSeconds: DEFAULT_TIMER_SECONDS,
   isTimerActive: false,
   prevActivePlayerId: null,
+  specials: "default",
 };
 
 interface IGameStore extends GameStoreState, GameStoreActions {}
@@ -60,6 +64,8 @@ export const useGameStore = create<IGameStore>()(
   persist(
     (set) => ({
       ...initialState,
+
+      setSpecials: (specials) => set({ specials: specials }),
 
       setIsTimerActive: (is) => set({ isTimerActive: is }),
 

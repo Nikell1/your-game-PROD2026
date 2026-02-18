@@ -10,7 +10,7 @@ import {
   PlayersList,
 } from "@/widgets";
 import { useTimer } from "@siberiacancode/reactuse";
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 
 export function QuestionPage() {
   const {

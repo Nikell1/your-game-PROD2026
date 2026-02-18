@@ -19,7 +19,7 @@ export function Frame({
 }: FrameProps) {
   return (
     <div
-      className={cn(className, "p-4 backdrop-blur-xs border flex flex-col")}
+      className={cn(className, "backdrop-blur-xs border flex")}
       style={
         isSolid
           ? {
