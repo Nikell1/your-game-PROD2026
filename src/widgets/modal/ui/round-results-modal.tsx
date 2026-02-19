@@ -1,11 +1,12 @@
 import { useGameStore } from "@/entities/game";
 import { useNewRound } from "@/features/new-round";
+import { cn } from "@/shared/lib";
 import { Button, Frame } from "@/shared/ui";
 import { ChevronRight } from "lucide-react";
 import { useMemo } from "react";
 
 export function RoundResultsModal() {
-  const { players } = useGameStore();
+  const { players, status } = useGameStore();
 
   const sortedPlayers = useMemo(() => {
     return [...players].sort((a, b) => b.score - a.score);
@@ -20,7 +21,13 @@ export function RoundResultsModal() {
         <p className="text-3xl">Подводим итоги</p>
 
         {sortedPlayers.map((player, index) => (
-          <div key={player.id} className="flex w-full justify-between gap-8">
+          <div
+            key={player.id}
+            className={cn(
+              "flex w-full justify-between gap-8",
+              status === "ROUND_2" && player.score <= 0 && "opacity-30",
+            )}
+          >
             <div className="flex gap-4">
               <span className="text-2xl flex m-auto">{index + 1}.</span>
 
@@ -39,7 +46,9 @@ export function RoundResultsModal() {
           onClick={() => newRound({})}
           className="flex gap-1 group mt-4"
         >
-          <span className="text-2xl">К следующему раунду</span>
+          <span className="text-2xl">
+            К {status === "ROUND_2" ? "финальному" : "следующему"} раунду
+          </span>
           <ChevronRight className="relative size-7 top-1 group-hover:translate-x-2 transition-transform duration-300" />
         </Button>
       </div>

@@ -4,49 +4,22 @@ import { ModalWrapper } from "./modal-wrapper";
 import { AuctionModal } from "./auction-modal";
 import { CatModalChosen } from "./cat-modal-chosen";
 import {
-  createCurrentQuestion,
-  DEFAULT_TIMER_SECONDS,
   QUESTIONS_COUNT,
   ROUND_1_PRICE_STEP,
   ROUND_2_PRICE_STEP,
   useGameStore,
 } from "@/entities/game";
-import { useRouter } from "next/navigation";
-import { GAME_ROUTES } from "@/shared/config";
 import { RoundResultsModal } from "./round-results-modal";
+import { useCatModalChosen } from "@/features/cat-in-bag";
 
 export function ModalWidget() {
-  const {
-    activePlayerId,
-    players,
-    currentQuestion,
-    setCurrentQuestion,
-    setIsTimerActive,
-    setTimerSeconds,
-    status,
-  } = useGameStore();
-  const { modalState, isCatPlayer, resetModalStore } = useModalStore();
-
-  const router = useRouter();
+  const { activePlayerId, players, status } = useGameStore();
+  const { modalState, isCatPlayer } = useModalStore();
+  const { onClick } = useCatModalChosen();
 
   const chosenPlayer = players.find((player) => activePlayerId === player.id);
-
   const classes = "w-170 pt-10! pb-6! gap-12 items-center";
-
   const bet = status === "ROUND_1" ? ROUND_1_PRICE_STEP : ROUND_2_PRICE_STEP;
-
-  function onClick(price: number) {
-    setCurrentQuestion(
-      createCurrentQuestion(currentQuestion, {
-        price: price,
-        isAnswering: true,
-      }),
-    );
-    setIsTimerActive(true);
-    setTimerSeconds(DEFAULT_TIMER_SECONDS);
-    router.replace(GAME_ROUTES.QUESTION(currentQuestion?.id || "0"));
-    resetModalStore();
-  }
 
   if (modalState === "cat_in_bag") {
     if (isCatPlayer) {

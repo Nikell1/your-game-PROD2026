@@ -13,6 +13,7 @@ import { generateQuestions } from "./generate-questions";
 import { useAnswerInputStore } from "@/features/answer-question";
 import { useAuctionStore } from "@/features/auction";
 import { useModalStore } from "@/shared/model";
+import { useStartFinal } from "@/features/final-round";
 
 interface Props {
   playersData?: ISetupPlayer[];
@@ -41,6 +42,8 @@ export function useNewRound() {
   const { resetModalStore } = useModalStore();
 
   const { resetAuctionStore } = useAuctionStore();
+
+  const { startFinal } = useStartFinal();
 
   return async ({ playersData, resetSetupGameStore }: Props) => {
     const responseThemes = await fetch("/data/themes.json");
@@ -72,7 +75,7 @@ export function useNewRound() {
       router.replace(GAME_ROUTES.ROUND_1);
     }
 
-    if (status === "ROUND_1") {
+    if (status === "ROUND_1" || status === "ROUND_2") {
       const availableThemes = themes.filter(
         (theme) => !usedThemesIds.includes(theme.id),
       );
@@ -81,18 +84,22 @@ export function useNewRound() {
         (question) => !usedQuestionsIds.includes(question.id),
       );
 
-      setStatus("ROUND_2");
-      resetRound();
-      generateQuestions({
-        themes: availableThemes,
-        questions: availableQuestions,
-        setMaterial,
-        setUsedQuestionsIds,
-        setUsedThemesIds,
-        difficulty: "medium",
-        step: ROUND_2_PRICE_STEP,
-      });
-      router.replace(GAME_ROUTES.ROUND_2);
+      if (status === "ROUND_1") {
+        setStatus("ROUND_2");
+        resetRound();
+        generateQuestions({
+          themes: availableThemes,
+          questions: availableQuestions,
+          setMaterial,
+          setUsedQuestionsIds,
+          setUsedThemesIds,
+          difficulty: "medium",
+          step: ROUND_2_PRICE_STEP,
+        });
+        router.replace(GAME_ROUTES.ROUND_2);
+      } else if (status === "ROUND_2") {
+        startFinal(availableThemes, availableQuestions);
+      }
     }
   };
 }
