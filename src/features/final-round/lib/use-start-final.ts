@@ -4,7 +4,13 @@ import { getRandomItems } from "@/shared/lib";
 import { useRouter } from "next/navigation";
 
 export function useStartFinal() {
-  const { setFinalQuestion, players, setPlayers, setStatus } = useGameStore();
+  const {
+    setFinalQuestion,
+    players,
+    setPlayers,
+    setStatus,
+    setActivePlayerId,
+  } = useGameStore();
   const router = useRouter();
 
   function startFinal(
@@ -21,9 +27,11 @@ export function useStartFinal() {
 
     setFinalQuestion(chosenQuestion);
 
-    const finalPlayers = players.filter((p) => p.score > 0);
+    const passedPlayers = players.filter((p) => p.score > 0);
 
-    setPlayers(finalPlayers);
+    setPlayers(passedPlayers);
+
+    setActivePlayerId(null);
 
     setStatus("FINAL_ROUND");
 

@@ -20,7 +20,10 @@ export function GameRoundPage() {
   const headerTitle = getRoundTitle(status);
 
   useEffect(() => {
-    if (answeredQuestionsIds.length === QUESTIONS_COUNT * THEMES_COUNT) {
+    // if (answeredQuestionsIds.length === QUESTIONS_COUNT * THEMES_COUNT) {
+    //   setModalState("round_results");
+    // }
+    if (answeredQuestionsIds.length === 1) {
       setModalState("round_results");
     }
   }, [answeredQuestionsIds, setModalState]);

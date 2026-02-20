@@ -2,9 +2,37 @@ import * as React from "react";
 
 import { cn } from "@/shared/lib/utils";
 
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+interface InputProps extends React.ComponentProps<"input"> {
+  isNumber?: boolean;
+}
+
+function Input({
+  className,
+  type,
+  isNumber = false,
+  onChange,
+  min,
+  max,
+  ...props
+}: InputProps) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (isNumber) {
+      const value = e.target.value;
+      if (value === "" || /^\d+$/.test(value)) {
+        const numValue = value === "" ? "" : Number(value);
+        if (min !== undefined && numValue < min) return;
+        if (max !== undefined && numValue > max) return;
+        onChange?.(e);
+      }
+    } else {
+      onChange?.(e);
+    }
+  };
   return (
     <input
+      min={min}
+      max={max}
+      onChange={handleChange}
       type={type}
       data-slot="input"
       className={cn(

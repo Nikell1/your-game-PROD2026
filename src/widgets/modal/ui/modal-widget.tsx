@@ -11,6 +11,7 @@ import {
 } from "@/entities/game";
 import { RoundResultsModal } from "./round-results-modal";
 import { useCatModalChosen } from "@/features/cat-in-bag";
+import { FinalBetModal } from "./final-bet-modal";
 
 export function ModalWidget() {
   const { activePlayerId, players, status } = useGameStore();
@@ -54,6 +55,14 @@ export function ModalWidget() {
     return (
       <ModalWrapper className="w-155 p-10 gap-12 items-center">
         <RoundResultsModal />
+      </ModalWrapper>
+    );
+  }
+
+  if (modalState === "final_bet") {
+    return (
+      <ModalWrapper className="w-120 p-8! gap-6 items-center">
+        <FinalBetModal />
       </ModalWrapper>
     );
   }

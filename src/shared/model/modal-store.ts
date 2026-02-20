@@ -6,7 +6,8 @@ type TModalState =
   | "cat_in_bag"
   | "auction"
   | "exit_submit"
-  | "round_results";
+  | "round_results"
+  | "final_bet";
 
 interface ModalState {
   modalState: TModalState;

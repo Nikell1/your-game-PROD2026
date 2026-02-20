@@ -14,3 +14,8 @@ export interface IActivePlayer extends ISetupPlayer {
   id: number;
   score: number;
 }
+
+export interface IFinalBet {
+  playerId: number;
+  bet: number;
+}

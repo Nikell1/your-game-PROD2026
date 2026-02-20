@@ -37,6 +37,7 @@ const roundInitialState = {
   material: [],
   specials: "default" as TQuestionSpecials,
   prevActivePlayerId: null,
+  finalBets: [],
 };
 
 const fullInitialState = {
@@ -46,6 +47,7 @@ const fullInitialState = {
   isOnDev: false,
   usedThemesIds: [],
   usedQuestionsIds: [],
+
   ...roundInitialState,
 };
 
