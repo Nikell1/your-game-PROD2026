@@ -58,9 +58,8 @@ export function useNewRound() {
     resetModalStore();
 
     if (status === "CREATING" && resetSetupGameStore && playersData) {
-      setActivePlayerId(1);
-      resetSetupGameStore();
       resetStore();
+      resetSetupGameStore();
       setGamePlayers({ playersData, setPlayers });
       setStatus("ROUND_1");
       generateQuestions({
@@ -73,6 +72,7 @@ export function useNewRound() {
         step: ROUND_1_PRICE_STEP,
       });
       router.replace(GAME_ROUTES.ROUND_1);
+      setActivePlayerId(1);
     }
 
     if (status === "ROUND_1" || status === "ROUND_2") {

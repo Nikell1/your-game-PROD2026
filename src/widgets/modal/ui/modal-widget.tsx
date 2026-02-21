@@ -12,10 +12,11 @@ import {
 import { RoundResultsModal } from "./round-results-modal";
 import { useCatModalChosen } from "@/features/cat-in-bag";
 import { FinalBetModal } from "./final-bet-modal";
+import { ExitModal } from "./exit-modal";
 
 export function ModalWidget() {
   const { activePlayerId, players, status } = useGameStore();
-  const { modalState, isCatPlayer } = useModalStore();
+  const { modalState, isCatPlayer, setModalState } = useModalStore();
   const { onClick } = useCatModalChosen();
 
   const chosenPlayer = players.find((player) => activePlayerId === player.id);
@@ -63,6 +64,17 @@ export function ModalWidget() {
     return (
       <ModalWrapper className="w-120 p-8! gap-6 items-center">
         <FinalBetModal />
+      </ModalWrapper>
+    );
+  }
+
+  if (modalState === "exit_submit") {
+    return (
+      <ModalWrapper
+        className="w-140 p-8! gap-6 items-center"
+        close={() => setModalState("closed")}
+      >
+        <ExitModal />
       </ModalWrapper>
     );
   }

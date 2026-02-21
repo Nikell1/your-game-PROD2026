@@ -1,16 +1,20 @@
 import { cn } from "@/shared/lib";
 import { Frame } from "@/shared/ui";
 
-export function ModalWrapper({
-  children,
-  className,
-}: {
+interface Props {
   children: React.ReactNode;
   className?: string;
-}) {
+  canClose?: boolean;
+  close?: () => void;
+}
+
+export function ModalWrapper({ children, className, close = () => {} }: Props) {
   return (
     <>
-      <div className="absolute z-5 bg-black/50 w-screen h-screen" />
+      <div
+        onClick={close}
+        className="absolute z-5 bg-black/50 w-screen h-screen"
+      />
 
       <Frame
         isSolid
