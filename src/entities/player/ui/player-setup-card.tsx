@@ -11,6 +11,7 @@ interface PlayerSetupCardProps {
 
   onPlayerRemove: (index: number) => void;
   onNameChange: (index: number, name: string) => void;
+  onClick: () => void;
 }
 
 export function PlayerSetupCard({
@@ -19,9 +20,10 @@ export function PlayerSetupCard({
   onPlayerRemove,
   index,
   onNameChange,
+  onClick,
 }: PlayerSetupCardProps) {
   return (
-    <PlayerCardWrapper player={player}>
+    <PlayerCardWrapper player={player} isSetup onClick={onClick}>
       <Button
         variant="ghost"
         disabled={isDisabled}

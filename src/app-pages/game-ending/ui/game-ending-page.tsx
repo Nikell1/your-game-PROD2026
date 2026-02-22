@@ -29,9 +29,15 @@ export function GameEndingPage() {
       <div className="flex w-full p-8 flex-1">
         <HostWidget />
         <div className="flex-1 flex justify-center gap-12 items-end relative z-3">
-          <PlayerWinnerCard player={sortedPlayers[2]} place={3} />
-          <PlayerWinnerCard player={sortedPlayers[0]} place={1} />
-          <PlayerWinnerCard player={sortedPlayers[1]} place={2} />
+          {sortedPlayers[2] && (
+            <PlayerWinnerCard player={sortedPlayers[2]} place={3} />
+          )}
+          {sortedPlayers[0] && (
+            <PlayerWinnerCard player={sortedPlayers[0]} place={1} />
+          )}
+          {sortedPlayers[1] && (
+            <PlayerWinnerCard player={sortedPlayers[1]} place={2} />
+          )}
         </div>
         <div
           className="w-full h-30 absolute bottom-0 bg-accent/50 left-0 backdrop-blur-xs 

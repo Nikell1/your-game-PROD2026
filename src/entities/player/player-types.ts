@@ -7,7 +7,7 @@ export interface ISetupPlayer {
   name: string;
   color: string;
   key: IKey;
-  customSettings?: string; // изменить
+  avatar?: string;
 }
 
 export interface IActivePlayer extends ISetupPlayer {

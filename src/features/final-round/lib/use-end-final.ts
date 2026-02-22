@@ -1,5 +1,4 @@
 import { useGameStore } from "@/entities/game";
-import { useHostPhrases } from "@/entities/host";
 import { useCallback } from "react";
 
 export function useEndFinal() {

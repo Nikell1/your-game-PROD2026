@@ -7,7 +7,8 @@ export type TModalState =
   | "auction"
   | "exit_submit"
   | "round_results"
-  | "final_bet";
+  | "final_bet"
+  | "add_avatar";
 
 interface ModalState {
   modalState: TModalState;

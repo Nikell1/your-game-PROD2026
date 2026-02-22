@@ -1,24 +1,26 @@
 import { useModalStore } from "@/shared/model";
-import { CatsModal } from "./cat-modal";
-import { ModalWrapper } from "./modal-wrapper";
-import { AuctionModal } from "./auction-modal";
-import { CatModalChosen } from "./cat-modal-chosen";
+import { useCatModalChosen } from "@/features/cat-in-bag";
 import {
   QUESTIONS_COUNT,
   ROUND_1_PRICE_STEP,
   ROUND_2_PRICE_STEP,
   useGameStore,
 } from "@/entities/game";
-import { RoundResultsModal } from "./round-results-modal";
-import { useCatModalChosen } from "@/features/cat-in-bag";
-import { FinalBetModal } from "./final-bet-modal";
-import { ExitModal } from "./exit-modal";
+import {
+  AuctionModal,
+  AvatarModal,
+  CatModalChosen,
+  CatsModal,
+  ExitModal,
+  FinalBetModal,
+  ModalWrapper,
+  RoundResultsModal,
+} from "./modals";
 
 export function ModalWidget() {
   const { activePlayerId, players, status } = useGameStore();
   const { modalState, isCatPlayer, setModalState } = useModalStore();
   const { onClick } = useCatModalChosen();
-
   const chosenPlayer = players.find((player) => activePlayerId === player.id);
   const classes = "w-170 pt-10! pb-6! gap-12 items-center";
   const bet = status === "ROUND_1" ? ROUND_1_PRICE_STEP : ROUND_2_PRICE_STEP;
@@ -75,6 +77,16 @@ export function ModalWidget() {
         close={() => setModalState("closed")}
       >
         <ExitModal />
+      </ModalWrapper>
+    );
+  }
+  if (modalState === "add_avatar") {
+    return (
+      <ModalWrapper
+        className="w-220 p-8! gap-6 items-center"
+        close={() => setModalState("closed")}
+      >
+        <AvatarModal />
       </ModalWrapper>
     );
   }
