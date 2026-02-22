@@ -1,4 +1,5 @@
 import { useSetupGameStore } from "@/app-pages/setup-game/model/setup-game-store";
+import { compressImage } from "@/shared/lib/compress-image";
 import { useModalStore } from "@/shared/model";
 
 export function usePlayerAvatar() {
@@ -33,19 +34,24 @@ export function usePlayerAvatar() {
 
     const reader = new FileReader();
 
-    reader.onload = () => {
-      if (typeof reader.result === "string") {
-        setAvatar(reader.result);
-      } else {
-        setAvatarError("Ошибка чтения файла");
-      }
-    };
+    const base64 = await new Promise<string>((resolve, reject) => {
+      reader.onload = () => {
+        if (typeof reader.result === "string") {
+          resolve(reader.result);
+        } else {
+          reject(new Error("Ошибка чтения файла"));
+        }
+      };
+      reader.onerror = () => reject(new Error("Ошибка чтения файла"));
+      reader.readAsDataURL(file);
+    });
 
-    reader.onerror = () => {
-      setAvatarError("Ошибка чтения файла");
-    };
-
-    reader.readAsDataURL(file);
+    try {
+      const compressed = await compressImage(base64, 150, 0.6);
+      setAvatar(compressed);
+    } catch {
+      setAvatarError("Ошибка сжатия изображения");
+    }
   }
 
   return { clickAvatarModal, setAvatar, setCustomAvatar, avatarError };
