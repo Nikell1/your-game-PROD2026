@@ -2,7 +2,7 @@
 
 import { useGameStore } from "@/entities/game";
 import { PlayerWinnerCard } from "@/entities/player";
-import { useEndGame } from "@/features/endGame";
+import { useEndGame } from "@/features/end-game";
 import { Button } from "@/shared/ui";
 import { Header, HostWidget } from "@/widgets";
 import Link from "next/link";

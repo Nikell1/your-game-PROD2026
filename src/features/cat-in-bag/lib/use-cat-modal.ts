@@ -1,4 +1,5 @@
 import { useGameStore } from "@/entities/game";
+import { useHostPhrases } from "@/entities/host";
 import { useModalStore } from "@/shared/model";
 import { useState } from "react";
 
@@ -11,6 +12,7 @@ export function useCatModal() {
     setIsCatPlayer,
   } = useModalStore();
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  const { say } = useHostPhrases();
   const { players, setActivePlayerId, setPrevActivePlayerId, setSpecials } =
     useGameStore();
 
@@ -28,6 +30,10 @@ export function useCatModal() {
     setPrevActivePlayerId(chosenPlayer?.id || -1);
     setIsCatPlayer(true);
     setSpecials("cat_in_bag");
+    say({
+      eventType: "cat_in_bag_player_selected",
+      playerName: chosenPlayer?.name,
+    });
   }
 
   function setAndValidateInputValue(value: string) {

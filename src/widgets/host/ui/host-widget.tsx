@@ -6,10 +6,9 @@ import { Frame } from "@/shared/ui";
 import Image from "next/image";
 
 export function HostWidget({ seconds }: { seconds?: number }) {
-  const { currentQuestion, finalQuestion, isTimerActive } = useGameStore();
+  const { currentQuestion, isShowTimer } = useGameStore();
 
-  const showTimer =
-    currentQuestion?.isAnswering || (finalQuestion && isTimerActive);
+  const showTimer = currentQuestion?.isAnswering && isShowTimer;
 
   return (
     <div className="flex flex-col h-full justify-between items-center relative z-3 shrink-0">

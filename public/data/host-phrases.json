@@ -351,27 +351,27 @@
   },
   {
     "id": "cat_modal_1",
-    "eventType": "cat_in_bag_modal",
+    "eventType": "cat_in_bag_open",
     "label": "Выберите игрока, который будет отвечать на вопрос кота."
   },
   {
     "id": "cat_modal_2",
-    "eventType": "cat_in_bag_modal",
+    "eventType": "cat_in_bag_open",
     "label": "Кому передать кота?"
   },
   {
     "id": "cat_modal_3",
-    "eventType": "cat_in_bag_modal",
+    "eventType": "cat_in_bag_open",
     "label": "Ваш ход — решите, кто будет отвечать."
   },
   {
     "id": "cat_modal_4",
-    "eventType": "cat_in_bag_modal",
+    "eventType": "cat_in_bag_open",
     "label": "Выбирайте соперника, который столкнётся с котом."
   },
   {
     "id": "cat_modal_5",
-    "eventType": "cat_in_bag_modal",
+    "eventType": "cat_in_bag_open",
     "label": "Кто следующий попробует кота?"
   },
   {
@@ -500,29 +500,14 @@
     "label": "Самый дорогой вопрос. Кто готов платить?"
   },
   {
-    "id": "auction_modal_1",
-    "eventType": "auction_modal",
-    "label": "Выберите игрока для ставки."
-  },
-  {
     "id": "auction_modal_2",
-    "eventType": "auction_modal",
+    "eventType": "auction_open",
     "label": "Кто будет торговаться?"
   },
   {
-    "id": "auction_modal_3",
-    "eventType": "auction_modal",
-    "label": "Ваш ход, делайте ставку!"
-  },
-  {
     "id": "auction_modal_4",
-    "eventType": "auction_modal",
+    "eventType": "auction_open",
     "label": "Ставки, господа!"
-  },
-  {
-    "id": "auction_modal_5",
-    "eventType": "auction_modal",
-    "label": "Кто следующий?"
   },
   {
     "id": "auction_bet_placed_1",

@@ -2,8 +2,7 @@ import { useHostStore } from "../model/host-store";
 import { getRandomPhrase, GetRandomPhraseOptions } from "./get-random-phrase";
 
 export function useHostPhrases() {
-  const { setCurrentEvent, setCurrentPhrase, currentEvent, currentPhrase } =
-    useHostStore();
+  const { setCurrentPhrase, currentEvent, currentPhrase } = useHostStore();
 
   function say({
     eventType,
@@ -19,8 +18,6 @@ export function useHostPhrases() {
       price,
       bet,
     });
-
-    setCurrentEvent(eventType);
     setCurrentPhrase(phrase?.label || "");
   }
 

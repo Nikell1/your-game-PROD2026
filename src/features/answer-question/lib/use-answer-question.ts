@@ -1,83 +1,28 @@
 import { useGameStore } from "@/entities/game";
-import { useManageScore } from "@/features/manage-user-score";
 import { useAnswerInputStore } from "../model/answer-input-store";
-import { useReturnToTable } from "@/features/return-to-table";
-import { useHostPhrases } from "@/entities/host";
 import { useFindPlayerInPlayers } from "@/entities/player";
+import { useHandleCorrectAnswer } from "./handle-correct-answer";
+import { useHandleIncorrect } from "./use-handle-incorrect";
 
 export function useAnswerQuestion(clear: () => void, resume: () => void) {
-  const {
-    activePlayerId,
-    setActivePlayerId,
-    isOnDev,
-    setAnsweredQuestionsIds,
-    answeredQuestionsIds,
-    currentQuestion,
-    setCurrentQuestion,
-    setIsTimerActive,
-    setSpecials,
-    specials,
-  } = useGameStore();
+  const { activePlayerId, isOnDev, currentQuestion } = useGameStore();
 
-  const { increaseScore, decreaseScore } = useManageScore();
   const { isCorrect, setIsCorrect } = useAnswerInputStore();
-  const returnToTable = useReturnToTable();
-  const { say } = useHostPhrases();
   const findPlayer = useFindPlayerInPlayers();
+  const handleCorrectAnswer = useHandleCorrectAnswer(clear);
+  const handleIncorrectAnswer = useHandleIncorrect(clear, resume);
 
   function answerHandler(answer: string) {
     if (currentQuestion && activePlayerId) {
       const activePlayer = findPlayer(activePlayerId);
       if (
         currentQuestion.correctAnswer.toLowerCase().replace(/\s/g, "") ===
-        answer.toLowerCase().replace(/\s/g, "")
+          answer.toLowerCase().replace(/\s/g, "") &&
+        activePlayer
       ) {
-        say({
-          eventType: "regular_correct_answer",
-          playerName: activePlayer?.name,
-          price: currentQuestion.price,
-        });
-
-        setIsCorrect(true);
-        increaseScore(activePlayerId, currentQuestion.price);
-
-        setTimeout(() => {
-          const newAnswered = [currentQuestion.id, ...answeredQuestionsIds];
-
-          setAnsweredQuestionsIds(newAnswered);
-
-          setSpecials("default");
-
-          clear();
-
-          setCurrentQuestion(null);
-
-          returnToTable();
-        }, 3000);
-      } else {
-        decreaseScore(activePlayerId, currentQuestion.price);
-
-        if (specials === "default") {
-          setIsCorrect(false);
-
-          resume();
-
-          setIsTimerActive(true);
-
-          setActivePlayerId(null);
-        } else if (specials === "auction" || specials === "cat_in_bag") {
-          const newAnswered = [currentQuestion.id, ...answeredQuestionsIds];
-
-          setAnsweredQuestionsIds(newAnswered);
-
-          setSpecials("default");
-
-          clear();
-
-          setCurrentQuestion(null);
-
-          returnToTable();
-        }
+        handleCorrectAnswer(activePlayer);
+      } else if (activePlayer) {
+        handleIncorrectAnswer(activePlayer);
       }
     } else {
       setIsCorrect(null);

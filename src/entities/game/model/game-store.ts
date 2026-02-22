@@ -21,8 +21,6 @@ import {
   usedIdsSlice,
   UsedIdsSlice,
 } from "./slices";
-import { DEFAULT_TIMER_SECONDS } from "../game-constants";
-import { TGameStatus, TQuestionSpecials } from "../game-types";
 
 interface IGameStore
   extends
