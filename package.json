@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/predev.js",
     "dev": "next dev",
-    "postbuild": "node scripts/prepare-static.js",
+    "prebuild": "node scripts/prebuild.js",
+    "postbuild": "node scripts/postbuild.js",
     "build": "next build",
     "start": "npx serve@latest public",
     "lint": "eslint"
