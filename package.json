@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postbuild": "node -e \"const fs=require('fs'); const { execSync }=require('child_process'); execSync('copyfiles -u 1 out/**/* public', {stdio:'inherit'}); if(fs.existsSync('public_original')){ execSync('copyfiles -u 1 public_original/**/* public', {stdio:'inherit'}); } console.log('✅ Готово!');\"",
+    "postbuild": "node scripts/prepare-static.js",
     "build": "next build",
     "start": "npx serve@latest public",
     "lint": "eslint"

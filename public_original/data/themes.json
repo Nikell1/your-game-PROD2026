@@ -1,0 +1,22 @@
+[
+  { "id": "history", "label": "История" },
+  { "id": "geography", "label": "География" },
+  { "id": "science", "label": "Наука" },
+  { "id": "art", "label": "Искусство" },
+  { "id": "cinema", "label": "Кино" },
+  { "id": "music", "label": "Музыка" },
+  { "id": "literature", "label": "Литература" },
+  { "id": "sport", "label": "Спорт" },
+  { "id": "nature", "label": "Природа" },
+  { "id": "technology", "label": "Технологии" },
+  { "id": "mythology", "label": "Мифология" },
+  { "id": "cuisine", "label": "Кулинария" },
+  { "id": "animals", "label": "Животные" },
+  { "id": "space", "label": "Космос" },
+  { "id": "medicine", "label": "Медицина" },
+  { "id": "economics", "label": "Экономика" },
+  { "id": "psychology", "label": "Психология" },
+  { "id": "philosophy", "label": "Философия" },
+  { "id": "fashion", "label": "Мода" },
+  { "id": "architecture", "label": "Архитектура" }
+]
