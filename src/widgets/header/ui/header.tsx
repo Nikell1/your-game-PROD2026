@@ -49,7 +49,9 @@ export function Header({ title }: { title: string }) {
           <span className="text-xl">Режим разработчика</span>
         </div>
 
-        <Settings size={35} />
+        <Button variant="ghost" onClick={() => setModalState("settings")}>
+          <Settings className="size-9" />
+        </Button>
       </div>
     </header>
   );

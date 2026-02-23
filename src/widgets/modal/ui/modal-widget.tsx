@@ -16,6 +16,7 @@ import {
   ModalWrapper,
   RoundResultsModal,
 } from "./modals";
+import { SettingsModal } from "./modals/settings-modal";
 
 export function ModalWidget() {
   const { activePlayerId, players, status, currentQuestion } = useGameStore();
@@ -24,7 +25,10 @@ export function ModalWidget() {
   const chosenPlayer = players.find((player) => activePlayerId === player.id);
   const classes = "w-170 pt-10! pb-6! gap-12 items-center";
   const bet = status === "ROUND_1" ? ROUND_1_PRICE_STEP : ROUND_2_PRICE_STEP;
-  const canClose = modalState === "add_avatar" || modalState === "exit_submit";
+  const canClose =
+    modalState === "add_avatar" ||
+    modalState === "exit_submit" ||
+    modalState === "settings";
 
   const getWrapperClassName = () => {
     switch (modalState) {
@@ -61,6 +65,7 @@ export function ModalWidget() {
       {modalState === "final_bet" && <FinalBetModal />}
       {modalState === "exit_submit" && <ExitModal />}
       {modalState === "add_avatar" && <AvatarModal />}
+      {modalState === "settings" && <SettingsModal />}
     </ModalWrapper>
   );
 }
