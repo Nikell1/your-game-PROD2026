@@ -25,3 +25,5 @@ export interface IFinalAnsweredPlayer {
   isCorrect: boolean;
   answer: string;
 }
+
+export type TSizes = "lg" | "sm";

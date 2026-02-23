@@ -1,18 +1,31 @@
 "use client";
 
-import { IActivePlayer } from "@/entities/player";
+import { IActivePlayer, TSizes } from "@/entities/player";
 import { Button } from "@/shared/ui";
 import { useManageScore } from "../lib/use-manage-score";
 import { DEV_MODE_SCORE_BUTTON_POINT } from "../score-constants";
 import { useGameStore } from "@/entities/game";
+import { cn } from "@/shared/lib";
 
 interface ScoreControlsProps {
   player: IActivePlayer;
+  size: TSizes;
 }
 
-export function ScoreControls({ player }: ScoreControlsProps) {
+export function ScoreControls({ player, size }: ScoreControlsProps) {
   const { increaseScore, decreaseScore } = useManageScore();
   const { isOnDev } = useGameStore();
+
+  const sizes = {
+    controls: {
+      lg: "text-3xl",
+      sm: "text-lg",
+    },
+    text: {
+      lg: "text-xl",
+      sm: "lext-md",
+    },
+  };
 
   return (
     <div
@@ -26,25 +39,29 @@ export function ScoreControls({ player }: ScoreControlsProps) {
               decreaseScore(player.id, DEV_MODE_SCORE_BUTTON_POINT)
             }
             variant="ghost"
-            className="text-3xl absolute left-0 -top-0.5"
+            className={cn(sizes.controls[size], "absolute left-0 -top-0.5")}
           >
             -
           </Button>
 
-          <p className="text-xl w-full text-center py-1">{player.score}</p>
+          <p className={cn(sizes.text[size], "w-full text-center py-1")}>
+            {player.score}
+          </p>
 
           <Button
             onClick={() =>
               increaseScore(player.id, DEV_MODE_SCORE_BUTTON_POINT)
             }
             variant="ghost"
-            className="text-3xl absolute right-0 -top-0.5"
+            className={cn(sizes.controls[size], "absolute right-0 -top-0.5")}
           >
             +
           </Button>
         </>
       ) : (
-        <p className="text-xl w-full text-center py-1">{player.score}</p>
+        <p className={cn(sizes.text[size], "w-full text-center py-1")}>
+          {player.score}
+        </p>
       )}
     </div>
   );

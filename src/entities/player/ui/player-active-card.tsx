@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib";
-import { IActivePlayer } from "../player-types";
+import { IActivePlayer, TSizes } from "../player-types";
 import { PlayerCardWrapper } from "./player-card-wrapper";
 
 interface PlayerActiveCardProps {
@@ -8,6 +8,7 @@ interface PlayerActiveCardProps {
   isActive: boolean;
   isBottom?: boolean;
   isDisabled?: boolean;
+  size?: TSizes;
 }
 
 export function PlayerActiveCard({
@@ -16,9 +17,18 @@ export function PlayerActiveCard({
   isActive,
   isBottom = true,
   isDisabled = false,
+  size = "lg",
 }: PlayerActiveCardProps) {
+  const sizes = {
+    text: {
+      lg: "text-2xl",
+      sm: "text-lg",
+    },
+  };
+
   return (
     <PlayerCardWrapper
+      size={size}
       player={player}
       style={isActive ? { boxShadow: `0 0 10px 0 ${player.color}40` } : {}}
       className={cn(
@@ -29,13 +39,13 @@ export function PlayerActiveCard({
       )}
     >
       <p
-        className="text-2xl font-medium leading-6 text-center"
+        className={cn(sizes.text[size], "font-medium leading-6 text-center")}
         style={{ color: player.color }}
       >
         {player.name}
       </p>
 
-      <p className="text-2xl">{player.key.label}</p>
+      <p className={sizes.text[size]}>{player.key.label}</p>
 
       {children}
     </PlayerCardWrapper>

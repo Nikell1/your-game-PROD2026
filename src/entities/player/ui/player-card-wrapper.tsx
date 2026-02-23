@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { ISetupPlayer } from "../player-types";
+import { ISetupPlayer, TSizes } from "../player-types";
 import { cn } from "@/shared/lib";
 import { Button, Frame } from "@/shared/ui";
 import { COLOR_PRIMARY } from "@/shared/constants";
@@ -14,6 +14,7 @@ interface PlayerCardProps {
   isSetup?: boolean;
   style?: CSSProperties;
   onClick?: () => void;
+  size?: TSizes;
 }
 
 export function PlayerCardWrapper({
@@ -23,18 +24,34 @@ export function PlayerCardWrapper({
   className,
   onClick = () => {},
   style = {},
+  size = "lg",
 }: PlayerCardProps) {
+  const sizes = {
+    container: {
+      lg: "w-50 h-66",
+      sm: "w-35 h-51",
+    },
+    avatar: {
+      lg: "size-20",
+      sm: "size-12",
+    },
+  };
+
   return (
     <Frame
       style={style}
       color={player?.color || COLOR_PRIMARY}
       className={cn(
-        " w-50 h-66 gap-2 items-center justify-between rounded-lg flex-col p-4 duration-200 transition-all",
+        sizes.container[size],
+        "gap-2 items-center justify-between rounded-lg flex-col p-4 duration-200 transition-all",
         className,
       )}
     >
       <div
-        className="rounded-full size-20 bg-background/50 border relative"
+        className={cn(
+          sizes.avatar[size],
+          "rounded-full bg-background/50 border relative",
+        )}
         style={{ borderColor: player?.color || COLOR_PRIMARY }}
       >
         <Image

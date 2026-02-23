@@ -1,7 +1,7 @@
 "use client";
 
 import { useGameStore } from "@/entities/game";
-import { PlayerActiveCard } from "@/entities/player";
+import { PlayerActiveCard, TSizes } from "@/entities/player";
 import { useAnswerInputStore } from "@/features/answer-question";
 import { ScoreControls } from "@/features/manage-user-score";
 import { cn } from "@/shared/lib";
@@ -9,6 +9,7 @@ import { cn } from "@/shared/lib";
 export function PlayersList() {
   const { players, activePlayerId, status, finalBets } = useGameStore();
   const { disabledPlayerIds } = useAnswerInputStore();
+  const size: TSizes = players.length > 5 ? "sm" : "lg";
 
   const chosenPlayers =
     status === "FINAL_ROUND"
@@ -29,12 +30,13 @@ export function PlayersList() {
       <div className="flex flex-row-reverse gap-[3%] px-20 overflow-hidden pt-12">
         {chosenPlayers.map((player) => (
           <PlayerActiveCard
+            size={size}
             key={player.id}
             player={player}
             isActive={player.id === activePlayerId}
             isDisabled={disabledPlayerIds.includes(player.id)}
           >
-            <ScoreControls player={player} />
+            <ScoreControls player={player} size={size} />
           </PlayerActiveCard>
         ))}
       </div>
