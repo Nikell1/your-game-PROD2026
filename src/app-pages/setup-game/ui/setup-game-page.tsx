@@ -1,69 +1,30 @@
 "use client";
 
-import {
-  validatePlayers,
-  MAX_PLAYERS,
-  MIN_PLAYERS,
-  PlayerSetupCard,
-} from "@/entities/player";
+import { PlayerSetupCard } from "@/entities/player";
 import { Button } from "@/shared/ui";
 import { Header } from "@/widgets";
 import { useSetupGameStore } from "../model/setup-game-store";
-import { useEffect, useMemo, useState } from "react";
-import { useNewRound } from "@/features/new-round";
-import { cn, createEnterListener } from "@/shared/lib";
+import { cn } from "@/shared/lib";
 import { ModalWidget } from "@/widgets/modal";
 import { usePlayerAvatar } from "@/features/player-avatar";
+import { useSetupPage } from "../lib/use-setup-page";
 
 export function SetupGamePage() {
+  const { playersData, updatePlayerName, resetSetupGameStore } =
+    useSetupGameStore();
+
   const {
-    players,
-    addPlayer,
-    playersData,
-    updatePlayerName,
-    removePlayer,
-    resetSetupGameStore,
-  } = useSetupGameStore();
+    deletingPlayerIndex,
+    newPlayerIndex,
+    handleRemovePlayer,
+    handleAddPlayer,
+    isPlayersValid,
+    startGame,
+    isAddBtnDisabled,
+    isRemoveBtnDisabled,
+  } = useSetupPage();
 
-  const startGame = useNewRound();
   const { clickAvatarModal } = usePlayerAvatar();
-  const [newPlayerIndex, setNewPlayerIndex] = useState<number | null>(null);
-  const [deletingPlayerIndex, setDeletingPlayerIndex] = useState<number | null>(
-    null,
-  );
-
-  const isPlayersValid = useMemo(
-    () => validatePlayers(playersData),
-    [playersData],
-  );
-
-  const handleRemovePlayer = (index: number) => {
-    setDeletingPlayerIndex(index);
-    setTimeout(() => {
-      removePlayer(index);
-      setDeletingPlayerIndex(null);
-    }, 300);
-  };
-
-  const handleAddPlayer = () => {
-    const newIndex = playersData.length;
-    setNewPlayerIndex(newIndex);
-    addPlayer();
-
-    setTimeout(() => setNewPlayerIndex(null), 1000);
-  };
-
-  useEffect(() => {
-    const cleanup = createEnterListener(() => {
-      if (isPlayersValid) {
-        startGame({ playersData, resetSetupGameStore });
-      }
-    });
-    return cleanup;
-  }, [isPlayersValid, playersData, resetSetupGameStore, startGame]);
-
-  const isRemoveBtnDisabled = useMemo(() => MIN_PLAYERS >= players, [players]);
-  const isAddBtnDisabled = useMemo(() => MAX_PLAYERS > players, [players]);
 
   return (
     <>
@@ -94,15 +55,21 @@ export function SetupGamePage() {
             </Button>
           )}
         </div>
-
-        <Button
-          size="xl"
-          className="text-2xl px-20 py-6 mt-6"
-          disabled={!isPlayersValid}
-          onClick={() => startGame({ playersData, resetSetupGameStore })}
-        >
-          Начать игру
-        </Button>
+        <div className="mt-6 flex flex-col items-center">
+          {!isPlayersValid && (
+            <p className="text-foreground/25 absolute">
+              Имена не должны повторяться и быть пустыми
+            </p>
+          )}
+          <Button
+            size="xl"
+            className="text-2xl px-20 py-6 mt-8"
+            disabled={!isPlayersValid}
+            onClick={() => startGame({ playersData, resetSetupGameStore })}
+          >
+            Начать игру
+          </Button>
+        </div>
       </div>
 
       <ModalWidget />
