@@ -35,7 +35,7 @@ export function EndingTable() {
                 isActive={false}
                 isBottom={false}
               >
-                <ScoreControls player={player} />
+                <ScoreControls player={player} size="lg" />
               </PlayerActiveCard>
 
               <Frame
