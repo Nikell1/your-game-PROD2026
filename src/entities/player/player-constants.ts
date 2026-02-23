@@ -28,7 +28,7 @@ export const PLAYERS_KEYS_LIST = [
     label: "[E]",
   },
   {
-    code: "keyF",
+    code: "KeyF",
     label: "[F]",
   },
 ] as const;

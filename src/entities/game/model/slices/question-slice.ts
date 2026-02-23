@@ -13,16 +13,19 @@ export interface QuestionSlice {
   specials: TQuestionSpecials;
   material: IThemeWithQuestions[];
   finalQuestion: IQuestion;
+  showCorrectAnswer: boolean;
 
   setCurrentQuestion: (question: ICurrentQuestion | null) => void;
   setAnsweredQuestionsIds: (answeredQuesitons: string[]) => void;
   setSpecials: (special: TQuestionSpecials) => void;
   setMaterial: (material: IThemeWithQuestions[]) => void;
   setFinalQuestion: (question: IQuestion) => void;
+  setShowCorrectAnswer: (bool: boolean) => void;
 }
 
 export const questionInitialState = {
   currentQuestion: null,
+  showCorrectAnswer: false,
   answeredQuestionsIds: [],
   specials: "default" as TQuestionSpecials,
   material: [],
@@ -38,6 +41,8 @@ export const questionInitialState = {
 
 export const questionSlice: StateCreator<QuestionSlice> = (set) => ({
   ...questionInitialState,
+
+  setShowCorrectAnswer: (bool) => set({ showCorrectAnswer: bool }),
 
   setMaterial: (material) => set({ material: material }),
 

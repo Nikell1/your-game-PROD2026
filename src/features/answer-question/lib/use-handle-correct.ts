@@ -6,7 +6,8 @@ import { IActivePlayer } from "@/entities/player";
 import { useTimeoutReturn } from "./use-timeout-return";
 
 export function useHandleCorrectAnswer(clear: () => void) {
-  const { activePlayerId, currentQuestion } = useGameStore();
+  const { activePlayerId, currentQuestion, setShowCorrectAnswer } =
+    useGameStore();
   const { setIsCorrect } = useAnswerInputStore();
   const { increaseScore } = useManageScore();
   const { say } = useHostPhrases();
@@ -38,6 +39,7 @@ export function useHandleCorrectAnswer(clear: () => void) {
           price: currentQuestion.price,
         });
       }
+      setShowCorrectAnswer(true);
       timeoutReturn();
     }
   };

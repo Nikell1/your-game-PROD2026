@@ -12,8 +12,13 @@ export function CurrentQuestionWidget({
   clear: () => void;
   resume: () => void;
 }) {
-  const { activePlayerId, currentQuestion, finalQuestion, status } =
-    useGameStore();
+  const {
+    activePlayerId,
+    currentQuestion,
+    finalQuestion,
+    status,
+    showCorrectAnswer,
+  } = useGameStore();
   const { isCorrect } = useAnswerInputStore();
 
   const question =
@@ -36,7 +41,14 @@ export function CurrentQuestionWidget({
         </span>
       </div>
 
-      <p className="text-3xl flex-1">{question?.label}</p>
+      <div className="flex-1 gap-32 flex flex-col">
+        <p className="text-3xl">{question?.label}</p>
+        {showCorrectAnswer && (
+          <p className="text-2xl text-center">
+            Правильный ответ: {question?.correctAnswer}
+          </p>
+        )}
+      </div>
 
       {shouldShowAnswerInput && <AnswerInput clear={clear} resume={resume} />}
     </Frame>

@@ -18,7 +18,7 @@ import {
 } from "./modals";
 
 export function ModalWidget() {
-  const { activePlayerId, players, status } = useGameStore();
+  const { activePlayerId, players, status, currentQuestion } = useGameStore();
   const { modalState, isCatPlayer, setModalState } = useModalStore();
   const { onClick } = useCatModalChosen();
   const chosenPlayer = players.find((player) => activePlayerId === player.id);
@@ -48,6 +48,7 @@ export function ModalWidget() {
     >
       {modalState === "cat_in_bag" && isCatPlayer && (
         <CatModalChosen
+          currentQuestion={currentQuestion}
           bet={bet}
           name={chosenPlayer?.name}
           onLeftClick={() => onClick(bet)}

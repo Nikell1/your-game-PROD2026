@@ -36,6 +36,7 @@ export function useQuestionClick() {
 
     if (question.specials === "cat_in_bag") {
       showCatModal();
+      setPrevActivePlayerId(activePlayerId);
       setActivePlayerId(null);
       setCurrentQuestion({ ...question, isAnswering: false });
       say({ eventType: "cat_in_bag_open" });

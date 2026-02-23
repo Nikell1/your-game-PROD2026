@@ -5,7 +5,7 @@ import { useGameStore } from "@/entities/game";
 export function useDisableQuestion(clear: () => void) {
   const timeoutReturn = useTimeoutReturn();
   const { say } = useHostPhrases();
-  const { currentQuestion } = useGameStore();
+  const { currentQuestion, setShowCorrectAnswer } = useGameStore();
 
   return () => {
     clear();
@@ -13,6 +13,7 @@ export function useDisableQuestion(clear: () => void) {
       eventType: "all_players_incorrect",
       correctAnswer: currentQuestion?.correctAnswer,
     });
+    setShowCorrectAnswer(true);
     timeoutReturn();
   };
 }

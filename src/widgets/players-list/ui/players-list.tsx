@@ -26,7 +26,7 @@ export function PlayersList() {
       border border-primary border-b-0 rounded-t-[80px]"
       />
 
-      <div className="flex flex-row-reverse gap-[4%] px-20 overflow-hidden pt-12">
+      <div className="flex flex-row-reverse gap-[3%] px-20 overflow-hidden pt-12">
         {chosenPlayers.map((player) => (
           <PlayerActiveCard
             key={player.id}

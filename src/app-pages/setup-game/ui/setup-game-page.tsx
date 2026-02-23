@@ -58,7 +58,7 @@ export function SetupGamePage() {
         <div className="mt-6 flex flex-col items-center">
           {!isPlayersValid && (
             <p className="text-foreground/25 absolute">
-              Имена не должны повторяться и быть пустыми
+              Имена не могут быть пустыми и не должны повторяться
             </p>
           )}
           <Button

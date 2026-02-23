@@ -13,8 +13,13 @@ export function useCatModal() {
   } = useModalStore();
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
   const { say } = useHostPhrases();
-  const { players, setActivePlayerId, setPrevActivePlayerId, setSpecials } =
-    useGameStore();
+  const {
+    players,
+    setActivePlayerId,
+    setPrevActivePlayerId,
+    prevActivePlayerId,
+    setSpecials,
+  } = useGameStore();
 
   function showCatModal() {
     resetModalStore();
@@ -38,13 +43,15 @@ export function useCatModal() {
 
   function setAndValidateInputValue(value: string) {
     setInputValue(value);
-
-    if (
-      players.find(
-        (player) => player.name.toLowerCase() === value.toLowerCase(),
-      )
-    ) {
-      setIsBtnDisabled(false);
+    const chosenPlayer = players.find(
+      (player) => player.name.toLowerCase() === value.toLowerCase(),
+    );
+    if (chosenPlayer) {
+      if (chosenPlayer.id !== prevActivePlayerId) {
+        setIsBtnDisabled(false);
+      } else {
+        setIsBtnDisabled(true);
+      }
     } else {
       setIsBtnDisabled(true);
     }

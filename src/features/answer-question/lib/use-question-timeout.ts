@@ -7,11 +7,16 @@ export function useAnswerTimeout(clear: () => void) {
   const { currentQuestion, prevActivePlayerId } = useGameStore();
   const { say } = useHostPhrases();
   const timeoutReturn = useTimeoutReturn();
+  const { setIsShowTimer, setIsTimerActive, setShowCorrectAnswer } =
+    useGameStore();
 
   const { decreaseScore } = useManageScore();
   return () => {
     if (currentQuestion) {
+      setIsTimerActive(false);
+      setIsShowTimer(false);
       clear();
+      setShowCorrectAnswer(true);
       if (
         currentQuestion.specials === "auction" ||
         currentQuestion.specials === "cat_in_bag"

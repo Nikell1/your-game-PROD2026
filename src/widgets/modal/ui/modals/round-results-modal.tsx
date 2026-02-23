@@ -1,18 +1,24 @@
 import { useGameStore } from "@/entities/game";
 import { useHostPhrases } from "@/entities/host";
 import { useNewRound } from "@/features/new-round";
+import { GAME_ROUTES } from "@/shared/config";
 import { cn } from "@/shared/lib";
+import { useModalStore } from "@/shared/model";
 import { Button, Frame } from "@/shared/ui";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useMemo } from "react";
 
 export function RoundResultsModal() {
-  const { players, status } = useGameStore();
+  const { players, status, setStatus } = useGameStore();
   const { say } = useHostPhrases();
+  const { setModalState } = useModalStore();
 
   const sortedPlayers = useMemo(() => {
     return [...players].sort((a, b) => b.score - a.score);
   }, [players]);
+
+  const canFinal = players.filter((p) => p.score > 0).length > 1;
 
   useEffect(() => {
     say({ eventType: "general_round_end" });
@@ -46,17 +52,35 @@ export function RoundResultsModal() {
             </Frame>
           </div>
         ))}
-
-        <Button
-          variant="ghost"
-          onClick={() => newRound({})}
-          className="flex gap-1 group mt-4"
-        >
-          <span className="text-2xl">
-            К {status === "ROUND_2" ? "финальному" : "следующему"} раунду
-          </span>
-          <ChevronRight className="relative size-7 top-1 group-hover:translate-x-2 transition-transform duration-300" />
-        </Button>
+        {canFinal || status !== "ROUND_2" ? (
+          <Button
+            variant="ghost"
+            onClick={() => newRound({})}
+            className="flex gap-1 group mt-4"
+          >
+            <span className="text-2xl">
+              К {status === "ROUND_2" ? "финальному" : "следующему"} раунду
+            </span>
+            <ChevronRight className="relative size-7 top-1 group-hover:translate-x-2 transition-transform duration-300" />
+          </Button>
+        ) : (
+          <div className="flex flex-col items-center">
+            <p className="text-foreground/40">
+              Слишком мало игроков, прошедших в финал
+            </p>
+            <Link
+              href={GAME_ROUTES.ENDING}
+              className="text-2xl flex group"
+              onClick={() => {
+                setModalState("closed");
+                setStatus("ENDING");
+              }}
+            >
+              <span>К завершению</span>
+              <ChevronRight className="relative size-7 top-1 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );

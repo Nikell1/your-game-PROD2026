@@ -1,4 +1,4 @@
-import { QUESTIONS_COUNT } from "@/entities/game";
+import { ICurrentQuestion, QUESTIONS_COUNT } from "@/entities/game";
 import { Button, CatIcon } from "@/shared/ui";
 
 interface Props {
@@ -6,6 +6,7 @@ interface Props {
   onLeftClick: () => void;
   onRightClick: () => void;
   bet: number;
+  currentQuestion: ICurrentQuestion | null;
 }
 
 export function CatModalChosen({
@@ -13,12 +14,16 @@ export function CatModalChosen({
   onLeftClick,
   onRightClick,
   bet,
+  currentQuestion,
 }: Props) {
   return (
     <>
       <div className=" flex flex-col gap-4 items-center">
         <CatIcon />
         <h1 className="text-6xl font-bold">Кот в мешке!</h1>
+        <p className="text-3xl text-center">
+          Тема вопроса: {currentQuestion?.themeLabel}
+        </p>
         <p className="text-3xl text-center">{name}, Делайте ставку</p>
       </div>
 

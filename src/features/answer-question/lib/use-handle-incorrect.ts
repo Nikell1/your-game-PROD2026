@@ -8,8 +8,13 @@ import { useTimeoutReturn } from "./use-timeout-return";
 export function useHandleIncorrect(clear: () => void, resume: () => void) {
   const { decreaseScore } = useManageScore();
   const { setIsCorrect, pushDisabledPlayerIds } = useAnswerInputStore();
-  const { activePlayerId, currentQuestion, specials, setActivePlayerId } =
-    useGameStore();
+  const {
+    activePlayerId,
+    currentQuestion,
+    specials,
+    setActivePlayerId,
+    setShowCorrectAnswer,
+  } = useGameStore();
 
   const { say } = useHostPhrases();
   const timeoutReturn = useTimeoutReturn();
@@ -33,6 +38,7 @@ export function useHandleIncorrect(clear: () => void, resume: () => void) {
         });
       } else if (specials === "auction" || specials === "cat_in_bag") {
         clear();
+        setShowCorrectAnswer(true);
         if (specials === "cat_in_bag") {
           say({
             eventType: "cat_in_bag_incorrect",

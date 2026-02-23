@@ -9,6 +9,10 @@ export function useTimeoutReturn() {
     setCurrentQuestion,
     setAnsweredQuestionsIds,
     setSpecials,
+    activePlayerId,
+    setActivePlayerId,
+    prevActivePlayerId,
+    setShowCorrectAnswer,
   } = useGameStore();
   const returnToTable = useReturnToTable();
   const { say } = useHostPhrases();
@@ -19,6 +23,7 @@ export function useTimeoutReturn() {
         const newAnswered = [currentQuestion.id, ...answeredQuestionsIds];
 
         setCurrentQuestion(null);
+        setShowCorrectAnswer(false);
         setAnsweredQuestionsIds(newAnswered);
 
         setSpecials("default");
@@ -28,6 +33,9 @@ export function useTimeoutReturn() {
         say({
           eventType: "question_table_open",
         });
+        if (!activePlayerId) {
+          setActivePlayerId(prevActivePlayerId);
+        }
       }, 3000);
     }
   };
