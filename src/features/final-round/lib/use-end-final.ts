@@ -2,14 +2,14 @@ import { useGameStore } from "@/entities/game";
 import { useCallback } from "react";
 
 export function useEndFinal() {
-  const { finalBets, answeredPlayersIds } = useGameStore();
+  const { finalBets, answeredPlayers } = useGameStore();
 
   return useCallback(() => {
     const state = useGameStore.getState();
     const currentPlayers = [...state.players];
 
     const updatedPlayers = currentPlayers.map((player) => {
-      const answer = answeredPlayersIds.find((a) => a.id === player.id);
+      const answer = answeredPlayers.find((a) => a.id === player.id);
       const bet = finalBets.find((b) => b.playerId === player.id);
 
       if (!answer || !bet) return player;
@@ -26,5 +26,5 @@ export function useEndFinal() {
       players: updatedPlayers,
       status: "ENDING",
     });
-  }, [finalBets, answeredPlayersIds]);
+  }, [finalBets, answeredPlayers]);
 }

@@ -13,9 +13,9 @@ export function useAnswerFinalQuestion(clear: () => void) {
         finalQuestion.correctAnswer.toLowerCase().replace(/\s/g, "") ===
         answer.toLowerCase().replace(/\s/g, "")
       ) {
-        setFinalAnswers(true);
+        setFinalAnswers(true, answer);
       } else {
-        setFinalAnswers(false);
+        setFinalAnswers(false, answer);
       }
 
       returnToTable();

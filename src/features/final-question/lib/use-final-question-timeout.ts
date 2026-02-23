@@ -8,7 +8,7 @@ export function useFinalQuestionTimeout(clear: () => void) {
   const { say } = useHostPhrases();
 
   return () => {
-    setFinalAnswers(false);
+    setFinalAnswers(false, "");
     clear();
 
     say({ eventType: "timer_expired" });

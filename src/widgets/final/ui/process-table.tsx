@@ -15,7 +15,7 @@ export function ProcessTable() {
     finalBets,
     setActivePlayerId,
     activePlayerId,
-    answeredPlayersIds,
+    answeredPlayers,
   } = useGameStore();
   const { setModalState } = useModalStore();
   const finalQuestionClick = useFinalQuestionClick();
@@ -44,14 +44,14 @@ export function ProcessTable() {
 
     const hasUnansweredPlayers = players.some(
       (player) =>
-        !answeredPlayersIds.some((answered) => answered.id === player.id),
+        !answeredPlayers.some((answered) => answered.id === player.id),
     );
 
     if (!hasUnansweredPlayers && players.length > 0) {
       finalCompletedRef.current = true;
       endFinal();
     }
-  }, [players, answeredPlayersIds, endFinal]);
+  }, [players, answeredPlayers, endFinal]);
 
   const answeringPlayer = players.find((p) => p.id === activePlayerId);
   return (

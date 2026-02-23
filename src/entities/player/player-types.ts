@@ -23,4 +23,5 @@ export interface IFinalBet {
 export interface IFinalAnsweredPlayer {
   id: number;
   isCorrect: boolean;
+  answer: string;
 }

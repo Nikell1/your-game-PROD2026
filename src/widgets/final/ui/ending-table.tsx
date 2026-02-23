@@ -9,8 +9,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 export function EndingTable() {
-  const { players, answeredPlayersIds, finalBets, finalQuestion } =
-    useGameStore();
+  const { players, answeredPlayers, finalBets, finalQuestion } = useGameStore();
   const { say } = useHostPhrases();
 
   useEffect(() => {
@@ -25,7 +24,7 @@ export function EndingTable() {
       <div className="flex flex-wrap overflow-auto custom-scroll gap-6">
         {players.map((player) => {
           const playerBet = finalBets.find((fb) => fb.playerId === player.id);
-          const answer = answeredPlayersIds.find((ans) => ans.id === player.id);
+          const answer = answeredPlayers.find((ans) => ans.id === player.id);
           const isCorAns = answer?.isCorrect ? "Верный" : "Неверный";
           const color = answer?.isCorrect ? COLOR_SUCCESS : COLOR_DESTRUCTIVE;
 

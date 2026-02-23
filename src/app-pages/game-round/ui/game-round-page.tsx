@@ -35,7 +35,7 @@ export function GameRoundPage() {
       <div className="flex w-full p-8 flex-1">
         <HostWidget />
         <div className="flex-1 flex justify-center">
-          {specials === "cat_in_bag" && <></>}
+          {specials === "cat_in_bag" && <QuestionsTable></QuestionsTable>}
           {specials === "auction" && <AuctionWidget />}
           {specials === "default" && <QuestionsTable />}
         </div>

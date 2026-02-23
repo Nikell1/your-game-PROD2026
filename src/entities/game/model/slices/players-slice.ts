@@ -11,14 +11,14 @@ export interface GamePlayersSlice {
   activePlayerId: number | null;
   prevActivePlayerId: number | null;
   finalBets: IFinalBet[];
-  answeredPlayersIds: IFinalAnsweredPlayer[];
+  answeredPlayers: IFinalAnsweredPlayer[];
 
   pushFinalBets: (finalBet: IFinalBet) => void;
   setPlayers: (players: IActivePlayer[]) => void;
   setActivePlayerId: (id: number | null) => void;
   setPrevActivePlayerId: (id: number | null) => void;
   getPlayerWithMinScore: () => IActivePlayer | undefined;
-  setFinalAnswers: (correct: boolean) => void;
+  setFinalAnswers: (correct: boolean, answer: string) => void;
   resetAnsweredPlayers: () => void;
 }
 
@@ -27,19 +27,19 @@ export const gamePlayersInitialState = {
   activePlayerId: null,
   prevActivePlayerId: null,
   finalBets: [],
-  answeredPlayersIds: [],
+  answeredPlayers: [],
 };
 
 export const gamePlayersRoundInitialState = {
   prevActivePlayerId: null,
   finalBets: [],
-  answeredPlayersIds: [],
+  answeredPlayers: [],
 };
 
 export const gamePlayersSlice: StateCreator<GamePlayersSlice> = (set, get) => ({
   ...gamePlayersInitialState,
 
-  resetAnsweredPlayers: () => set({ answeredPlayersIds: [] }),
+  resetAnsweredPlayers: () => set({ answeredPlayers: [] }),
 
   pushFinalBets: (finalBet) =>
     set((state) => ({
@@ -61,24 +61,24 @@ export const gamePlayersSlice: StateCreator<GamePlayersSlice> = (set, get) => ({
 
   setPrevActivePlayerId: (id) => set({ prevActivePlayerId: id }),
 
-  setFinalAnswers: (correct: boolean) =>
+  setFinalAnswers: (correct, answer) =>
     set(
       produce((state: GamePlayersSlice) => {
         if (state.activePlayerId === null) {
-          console.warn("Нет активного игрока для ответа");
           return;
         }
 
         const currentPlayerId = state.activePlayerId;
 
-        state.answeredPlayersIds.push({
+        state.answeredPlayers.push({
           id: currentPlayerId,
           isCorrect: correct,
+          answer: answer,
         });
 
         const nextPlayer = state.players.find(
           (player) =>
-            !state.answeredPlayersIds.some(
+            !state.answeredPlayers.some(
               (answered) => answered.id === player.id,
             ),
         );

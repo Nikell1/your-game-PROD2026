@@ -2,6 +2,16 @@ import { GameRoundPage } from "@/app-pages";
 import { NO_INDEX_PAGE, PROJECT_NAME } from "@/shared/constants";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  const roundIds = ["1", "2"];
+
+  return roundIds.map((id) => ({
+    id: id,
+  }));
+}
+
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
