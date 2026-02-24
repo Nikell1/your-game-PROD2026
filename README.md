@@ -33,6 +33,132 @@
 
 ---
 
+# Детальное описание взаимодействия слоев:
+
+### 1. Слой `app` (Next.js App Router)
+
+**Ответственность:**
+- Определение маршрутов
+- Получение параметров URL
+- Рендеринг соответствующей страницы из `app-pages`
+
+### 2. Слой `app-pages` (композиция страниц)
+
+**Ответственность:**
+- Композиция виджетов для конкретной страницы
+- Оркестрация данных между виджетами
+- Обработка событий страницы
+
+### 3. Слой `widgets` (композиционные блоки)
+
+**Ответственность:**
+- Композиция фич в готовые блоки
+- Минимальная логика presentation layer
+- Передача событий в фичи
+
+### 4. Слой `features` (пользовательские сценарии)
+
+**Ответственность:**
+- Реализация конкретного пользовательского сценария
+- Взаимодействие с `entities`
+- Навигация
+- Бизнес-логика сценария
+
+### 5. Слой `entities` (бизнес-сущности)
+
+**Ответственность:**
+- Бизнес-логика предметной области
+- Типы и интерфейсы
+- Store для состояния сущности
+
+### 6. Слой `shared` (переиспользуемый код)
+
+**Ответственность:**
+- Переиспользуемые UI компоненты
+- Утилиты и хелперы
+- Константы, конфиги
+
+### 7. Слой `providers` (провайдеры)
+
+**Ответственность:**
+- Глобальные провайдеры состояния
+- Контексты (аудио, тема)
+
+---
+
+# Потоки данных в игре
+
+### 1. Начало игры
+
+[app] /game/setup  
+        ↓  
+[app-pages] SetupGamePage  
+        ↓  
+[widgets] PlayerSetupList  
+        ↓  
+[features] usePlayerAvatar, useValidatePlayers  
+        ↓  
+[entities] player/validate-players.ts  
+        ↓  
+[shared] ui/input.tsx, ui/button.tsx  
+        ↓  
+[app] /game/round/1 (редирект после валидации)  
+
+### 2. Выбор вопроса
+
+[widgets] QuestionsTable  
+        ↓ (клик)  
+[features] useQuestionClick  
+        ↓  
+[entities] game/question-slice (setCurrentQuestion)  
+
+### 3. Ответ на вопрос
+
+[app] /game/[questionId]  
+        ↓  
+[app-pages] QuestionPage  
+        ↓  
+[widgets] CurrentQuestionWidget  
+        ↓  
+[features]  
+├─→ [features] useKeysClick (захват права ответа)  
+├─→ [features] useTimer  
+├─→ [features] useHandleCorrect / useHandleIncorrect  
+└─→ [entities] game/players-slice (updateScore)  
+        ↓  
+[features] useReturnToTable  
+        ↓  
+[app] /game/round/[id]  
+
+### 4. Финальный раунд
+
+[app] /game/round/final  
+        ↓  
+[widgets] FinalRoundWidget  
+        ↓  
+[features] useStartFinal (фильтрация игроков)  
+        ↓  
+[widgets] PlayersBets (секретные ставки)  
+        ↓  
+[features/final-question] useFinalQuestionClick  
+        ↓  
+[widgets] ProcessTable (поочередные ответы)  
+        ↓  
+[features] useEndFinal (подсчет результатов)  
+        ↓  
+[app] /game/ending  
+
+## Ключевые паттерны и принципы
+
+1. Композиция через хуки
+
+2. Изоляция бизнес-логики
+
+3. Публичное API через index.ts
+
+4. Строгие правила импортов
+
+
 ## Полная структура проекта:
 
 src/  
@@ -318,128 +444,3 @@ src/
         ├── postbuild.js  
         ├── prebuild.js  
         └── predev.js  
-
-# Детальное описание взаимодействия слоев:
-
-### 1. Слой `app` (Next.js App Router)
-
-**Ответственность:**
-- Определение маршрутов
-- Получение параметров URL
-- Рендеринг соответствующей страницы из `app-pages`
-
-### 2. Слой `app-pages` (композиция страниц)
-
-**Ответственность:**
-- Композиция виджетов для конкретной страницы
-- Оркестрация данных между виджетами
-- Обработка событий страницы
-
-### 3. Слой `widgets` (композиционные блоки)
-
-**Ответственность:**
-- Композиция фич в готовые блоки
-- Минимальная логика presentation layer
-- Передача событий в фичи
-
-### 4. Слой `features` (пользовательские сценарии)
-
-**Ответственность:**
-- Реализация конкретного пользовательского сценария
-- Взаимодействие с `entities`
-- Навигация
-- Бизнес-логика сценария
-
-### 5. Слой `entities` (бизнес-сущности)
-
-**Ответственность:**
-- Бизнес-логика предметной области
-- Типы и интерфейсы
-- Store для состояния сущности
-
-### 6. Слой `shared` (переиспользуемый код)
-
-**Ответственность:**
-- Переиспользуемые UI компоненты
-- Утилиты и хелперы
-- Константы, конфиги
-
-### 7. Слой `providers` (провайдеры)
-
-**Ответственность:**
-- Глобальные провайдеры состояния
-- Контексты (аудио, тема)
-
----
-
-# Потоки данных в игре
-
-### 1. Начало игры
-
-[app] /game/setup  
-  ↓  
-[app-pages] SetupGamePage  
-  ↓  
-[widgets] PlayerSetupList  
-  ↓  
-[features] usePlayerAvatar, useValidatePlayers  
-  ↓  
-[entities] player/validate-players.ts  
-  ↓  
-[shared] ui/input.tsx, ui/button.tsx  
-  ↓  
-[app] /game/round/1 (редирект после валидации)  
-
-### 2. Выбор вопроса
-
-[widgets] QuestionsTable  
-  ↓ (клик)  
-[features] useQuestionClick  
-  ↓  
-[entities] game/question-slice (setCurrentQuestion)  
-
-### 3. Ответ на вопрос
-
-[app] /game/[questionId]  
-  ↓  
-[app-pages] QuestionPage  
-  ↓  
-[widgets] CurrentQuestionWidget  
-  ↓  
-[features]  
-├─→ [features] useKeysClick (захват права ответа)  
-├─→ [features] useTimer  
-├─→ [features] useHandleCorrect / useHandleIncorrect  
-└─→ [entities] game/players-slice (updateScore)  
-  ↓  
-[features] useReturnToTable  
-  ↓  
-[app] /game/round/[id]  
-
-### 4. Финальный раунд
-
-[app] /game/round/final  
-  ↓  
-[widgets] FinalRoundWidget  
-  ↓  
-[features] useStartFinal (фильтрация игроков)  
-  ↓  
-[widgets] PlayersBets (секретные ставки)  
-  ↓  
-[features/final-question] useFinalQuestionClick  
-  ↓  
-[widgets] ProcessTable (поочередные ответы)  
-  ↓  
-[features] useEndFinal (подсчет результатов)  
-  ↓  
-[app] /game/ending  
-
-## Ключевые паттерны и принципы
-
-1. Композиция через хуки
-
-2. Изоляция бизнес-логики
-
-3. Публичное API через index.ts
-
-4. Строгие правила импортов
