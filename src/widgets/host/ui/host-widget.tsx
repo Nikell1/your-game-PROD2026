@@ -28,8 +28,8 @@ export function HostWidget({ seconds }: { seconds?: number }) {
       <Image
         className="relative bottom-2"
         src="/host-image.png"
-        width={213}
-        height={359}
+        width={245}
+        height={448}
         alt="Ведущий"
         loading="eager"
       />
